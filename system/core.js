@@ -3,12 +3,19 @@ const Trait = {};
 const RecordType = {};
 const Field = {};
 const Module = {};
-const RootModule = {};
-const CoreModule = {};
 const TextType = 'TextType';
 const NumberType = 'NumberType';
 const BooleanType = 'BooleanType';
+
+const RootModule = {
+    id: 'Root',
+    type: Module,
+};
+
 const Core = {
+    id: 'Core',
+    type: Module,
+    parentModule: RootModule,
     Record: Record,
     Trait: Trait,
     RecordType: RecordType,
@@ -21,14 +28,7 @@ const Core = {
 };
 
 module.exports = Core;
-
-RootModule.id = 'Root';
-RootModule.type = Module;
-
-CoreModule.id = 'Core';
-CoreModule.type = Module;
-CoreModule.parentModule = RootModule;
-
+RootModule.Core = Core;
 
 const TextField = require('./text-field');
 const RecordField = require('./record-field');
@@ -47,28 +47,28 @@ Record.id = 'Record';
 Record.type = RecordType;
 Record.fields = [idField, typeField];
 Record.baseType = Record;
-Record.module = CoreModule;
+Record.module = Core;
 
 Module.id = 'Module';
 Module.type = RecordType;
 Module.fields = [idField, parentModuleField];
 Module.baseType = Record;
-Module.module = CoreModule;
+Module.module = Core;
 
 Trait.id = 'Trait';
 Trait.type = RecordType;
 Trait.fields = [idField, typeField, fieldsField];
 Trait.baseType = Record;
-Trait.module = CoreModule;
+Trait.module = Core;
 
 RecordType.id = 'RecordType';
 RecordType.type = RecordType;
 RecordType.fields = [idField, typeField, fieldsField, baseTypeField];
 RecordType.baseType = Trait;
-RecordType.module = CoreModule;
+RecordType.module = Core;
 
 Field.id = 'Field';
 Field.type = RecordType;
 Field.fields = [];
 Field.baseType = Record;
-Field.module = CoreModule;
+Field.module = Core;
