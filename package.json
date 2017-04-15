@@ -9,12 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KoikeTakayuki/record.git"
+    "url": "git+https://github.com/KoikeTakayuki/ameba-core.git"
   },
   "author": "KoikeTakayuki",
-  "dependencies": {
-    "structured-clone": "^0.2.2"
-  },
   "devDependencies": {
     "mocha": "^3.2.0"
   }
