@@ -60,6 +60,7 @@ Record.type = RecordType;
 Record.fields = [idField, typeField];
 Record.baseType = Record;
 Record.module = Core;
+Record.traits = [];
 
 Module.id = 'Module';
 Module.type = RecordType;
@@ -72,12 +73,14 @@ Trait.type = RecordType;
 Trait.fields = [idField, typeField, fieldsField, traitsField];
 Trait.baseType = Record;
 Trait.module = Core;
+Trait.traits = [];
 
 RecordType.id = 'RecordType';
 RecordType.type = RecordType;
 RecordType.fields = [idField, typeField, fieldsField, traitsField, baseTypeField];
 RecordType.baseType = Trait;
 RecordType.module = Core;
+RecordType.traits = [];
 
 Field.id = 'Field';
 Field.type = RecordType;
