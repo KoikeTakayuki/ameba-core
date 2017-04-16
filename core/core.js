@@ -24,10 +24,15 @@ const RootModule = {
     type: Module,
 };
 
-const Core = {
+const CoreModule = {
     id: 'Core',
     type: Module,
     parentModule: RootModule,
+};
+
+const Core = {
+    CoreModule: CoreModule,
+    RootModule: RootModule,
     Record: Record,
     Trait: Trait,
     RecordType: RecordType,
@@ -61,12 +66,14 @@ Record.fields = [idField, typeField];
 Record.baseType = Record;
 Record.module = Core;
 Record.traits = [];
+Record._id = Record.id;
 
 Module.id = 'Module';
 Module.type = RecordType;
 Module.fields = [idField, typeField, parentModuleField];
 Module.baseType = Record;
 Module.module = Core;
+Module._id = Module.id;
 
 Trait.id = 'Trait';
 Trait.type = RecordType;
@@ -74,6 +81,7 @@ Trait.fields = [idField, typeField, fieldsField, traitsField];
 Trait.baseType = Record;
 Trait.module = Core;
 Trait.traits = [];
+Trait._id = Trait.id;
 
 RecordType.id = 'RecordType';
 RecordType.type = RecordType;
@@ -81,9 +89,11 @@ RecordType.fields = [idField, typeField, fieldsField, traitsField, baseTypeField
 RecordType.baseType = Trait;
 RecordType.module = Core;
 RecordType.traits = [];
+RecordType._id = RecordType.id;
 
 Field.id = 'Field';
 Field.type = RecordType;
 Field.fields = [];
 Field.baseType = Record;
 Field.module = Core;
+Field._id = Field.id;

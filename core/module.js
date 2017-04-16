@@ -2,7 +2,7 @@ const Core = require('./core');
 
 module.exports = function (id, parentModule) {
     if (!parentModule) {
-        parentModule = Core.parentModule;
+        parentModule = Core.RootModule;
     }
 
     return {

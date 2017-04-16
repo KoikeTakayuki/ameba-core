@@ -1,4 +1,4 @@
-const CoreModule = require('./core/core')
+const Core = require('./core/core')
 
 module.exports = {
     Trait: require('./core/trait'),
@@ -9,8 +9,8 @@ module.exports = {
     NumberField: require('./core/number-field'),
     BooleanField: require('./core/boolean-field'),
     TextField: require('./core/text-field'),
-    TextType: CoreModule.TextType,
-    BooleanType: CoreModule.BooleanType,
-    NumberType: CoreModule.NumberType,
+    TextType: Core.TextType,
+    BooleanType: Core.BooleanType,
+    NumberType: Core.NumberType,
     MODULE_PATH_SEPARTOR: '.'
 };
