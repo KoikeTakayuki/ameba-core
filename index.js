@@ -12,4 +12,5 @@ module.exports = {
     TextType: CoreModule.TextType,
     BooleanType: CoreModule.BooleanType,
     NumberType: CoreModule.NumberType,
+    MODULE_PATH_SEPARTOR: '.'
 };
