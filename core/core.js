@@ -63,7 +63,7 @@ Trait.module = Core;
 
 RecordType.id = 'RecordType';
 RecordType.type = RecordType;
-RecordType.fields = [idField, typeField, fieldsField, baseTypeField];
+RecordType.fields = [idField, typeField, fieldsField, traitsField, baseTypeField];
 RecordType.baseType = Trait;
 RecordType.module = Core;
 
