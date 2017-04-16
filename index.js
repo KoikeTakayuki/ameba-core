@@ -7,7 +7,6 @@ module.exports = {
     RecordField: require('./core/record-field'),
     ListField: require('./core/list-field'),
     InnerRecordField: require('./core/inner-record-field'),
-    InnerListField: require('./core/inner-list-field'),
     NumberField: require('./core/number-field'),
     BooleanField: require('./core/boolean-field'),
     TextField: require('./core/text-field'),
