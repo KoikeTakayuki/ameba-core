@@ -38,7 +38,7 @@ const BooleanField = require('./boolean-field');
 
 
 const idField = TextField('id', {isRequired: true});
-const parentModuleField = RecordField('module', Module);
+const parentModuleField = RecordField('parentModule', Module);
 const typeField = RecordField('type', RecordType, {isRequired: true});
 const fieldsField = ListField('fields', Field, {isRequired: true});
 const baseTypeField = ListField('baseType', Field, {isRequired: true});
