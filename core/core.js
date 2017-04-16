@@ -5,14 +5,17 @@ const Field = {};
 const Module = {};
 const TextType = {
     id: 'TextType',
+    isPrimitiveType: true,
     isInnerType: true
 };
 const NumberType = {
     id: 'NumberType',
+    isPrimitiveType: true,
     isInnerType: true
 };
 const BooleanType = {
     id: 'BooleanType',
+    isPrimitiveType: true,
     isInnerType: true
 };
 
