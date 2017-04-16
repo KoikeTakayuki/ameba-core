@@ -6,7 +6,6 @@ module.exports = function (module, id, fields, args) {
         id: id,
         type: Core.Trait,
         fields: fields,
-        baseType: (args && args.baseType) ? args.baseType : Core.Record,
         traits: (args && args.traits) ? args.traits : []
     };
 };
