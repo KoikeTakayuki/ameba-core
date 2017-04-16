@@ -44,7 +44,6 @@ const Core = {
 };
 
 module.exports = Core;
-RootModule.Core = Core;
 
 const TextField = require('./text-field');
 const RecordField = require('./record-field');
@@ -64,7 +63,7 @@ Record.id = 'Record';
 Record.type = RecordType;
 Record.fields = [idField, typeField];
 Record.baseType = Record;
-Record.module = Core;
+Record.module = CoreModule;
 Record.traits = [];
 Record._id = Record.id;
 
@@ -72,14 +71,14 @@ Module.id = 'Module';
 Module.type = RecordType;
 Module.fields = [idField, typeField, parentModuleField];
 Module.baseType = Record;
-Module.module = Core;
+Module.module = CoreModule;
 Module._id = Module.id;
 
 Trait.id = 'Trait';
 Trait.type = RecordType;
 Trait.fields = [idField, typeField, fieldsField, traitsField];
 Trait.baseType = Record;
-Trait.module = Core;
+Trait.module = CoreModule;
 Trait.traits = [];
 Trait._id = Trait.id;
 
@@ -87,7 +86,7 @@ RecordType.id = 'RecordType';
 RecordType.type = RecordType;
 RecordType.fields = [idField, typeField, fieldsField, traitsField, baseTypeField];
 RecordType.baseType = Trait;
-RecordType.module = Core;
+RecordType.module = CoreModule;
 RecordType.traits = [];
 RecordType._id = RecordType.id;
 
@@ -95,5 +94,5 @@ Field.id = 'Field';
 Field.type = RecordType;
 Field.fields = [];
 Field.baseType = Record;
-Field.module = Core;
+Field.module = CoreModule;
 Field._id = Field.id;
