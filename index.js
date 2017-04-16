@@ -3,6 +3,7 @@ const CoreModule = require('./core/core')
 module.exports = {
     Trait: require('./core/trait'),
     RecordType: require('./core/record-type'),
+    Module: require('./core/module'),
     RecordField: require('./core/record-field'),
     ListField: require('./core/list-field'),
     NumberField: require('./core/number-field'),
