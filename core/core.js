@@ -51,7 +51,7 @@ Record.module = Core;
 
 Module.id = 'Module';
 Module.type = RecordType;
-Module.fields = [idField, parentModuleField];
+Module.fields = [idField, typeField, parentModuleField];
 Module.baseType = Record;
 Module.module = Core;
 
