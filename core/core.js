@@ -3,9 +3,18 @@ const Trait = {};
 const RecordType = {};
 const Field = {};
 const Module = {};
-const TextType = 'TextType';
-const NumberType = 'NumberType';
-const BooleanType = 'BooleanType';
+const TextType = {
+    id: 'TextType',
+    isInnerType: true
+};
+const NumberType = {
+    id: 'NumberType',
+    isInnerType: true
+};
+const BooleanType = {
+    id: 'BooleanType',
+    isInnerType: true
+};
 
 const RootModule = {
     id: 'Root',
