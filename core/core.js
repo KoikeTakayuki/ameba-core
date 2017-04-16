@@ -21,7 +21,6 @@ const Core = {
     RecordType: RecordType,
     Field: Field,
     Module: Module,
-    RootModule: RootModule,
     TextType: TextType,
     NumberType: NumberType,
     BooleanType: BooleanType
