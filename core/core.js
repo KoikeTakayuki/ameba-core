@@ -40,7 +40,7 @@ const idField = TextField('id', {isRequired: true});
 const parentModuleField = RecordField('parentModule', Module);
 const typeField = RecordField('type', RecordType, {isRequired: true});
 const fieldsField = ListField('fields', Field, {isRequired: true});
-const baseTypeField = ListField('baseType', Field, {isRequired: true});
+const baseTypeField = RecordField('baseType', Field);
 
 Record.id = 'Record';
 Record.type = RecordType;
