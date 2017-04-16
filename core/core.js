@@ -41,6 +41,7 @@ const parentModuleField = RecordField('parentModule', Module);
 const typeField = RecordField('type', RecordType, {isRequired: true});
 const fieldsField = ListField('fields', Field, {isRequired: true});
 const baseTypeField = RecordField('baseType', Field);
+const traitsField = ListField('traits', Trait);
 
 Record.id = 'Record';
 Record.type = RecordType;
@@ -56,7 +57,7 @@ Module.module = Core;
 
 Trait.id = 'Trait';
 Trait.type = RecordType;
-Trait.fields = [idField, typeField, fieldsField];
+Trait.fields = [idField, typeField, fieldsField, traitsField];
 Trait.baseType = Record;
 Trait.module = Core;
 
