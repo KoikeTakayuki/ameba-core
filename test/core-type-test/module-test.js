@@ -1,7 +1,7 @@
 let should = require('should'),
     Module = require('../../core/core-type').Module;
 
-describe('RecordType', function() {
+describe('Module', function() {
 
   it ('should be an object', function () {
     Module.should.be.an.Object();

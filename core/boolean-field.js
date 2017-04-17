@@ -4,7 +4,7 @@ let CoreType = require('./core-type')
 module.exports = function (id, args) {
     let isRequired = !!(args && args.isRequired === true),
         isListField = false,
-        defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
+        defaultValue = args && args.defaultValue;
 
     return Field(id, CoreType.BooleanType, isRequired, isListField, defaultValue);
 };

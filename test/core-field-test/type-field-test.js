@@ -1,7 +1,7 @@
 let should = require('should'),
     TypeField = require('../../core/core-field').Type;
 
-describe('IdField', function () {
+describe('TypeField', function () {
 
     it('should be an object', function () {
         TypeField.should.be.an.Object();

@@ -13,12 +13,12 @@ CoreField.Id = TextField('id', { isRequired: true });
 CoreField.Type = RecordField('type', CoreType.RecordType, { isRequired: true });
 
 // Trait Fields
-CoreField.Module = RecordField('module', CoreType.Module);
+CoreField.Module = RecordField('module', CoreType.Module, { isRequired: true });
 CoreField.Fields = ListField('fields', CoreType.Field, { isRequired: true });
-CoreField.Traits = ListField('traits', CoreType.Trait);
+CoreField.Traits = ListField('traits', CoreType.Trait, { defaultValue: [] });
 
 // RecordType Fields
-CoreField.BaseType = RecordField('baseType', CoreType.RecordType);
+CoreField.BaseType = RecordField('baseType', CoreType.RecordType, { defaultValue: CoreType.Record });
 CoreField.IsInnerType = BooleanField('isInnerType', { defaultValue: false });
 CoreField.IsPrimitiveType = BooleanField('isPrimitiveType', { defaultValue: false });
 
@@ -29,6 +29,6 @@ CoreField.IsListField = BooleanField('isListField', { defaultValue: false });
 CoreField.DefaultValue = RecordField('defaultValue', CoreType.Record);
 
 // Module Fields
-CoreField.ParentModule = RecordField('parentModule', CoreType.Module);
+CoreField.ParentModule = RecordField('parentModule', CoreType.Module, { isRequired: true });
 
     
