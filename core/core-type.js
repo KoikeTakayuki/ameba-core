@@ -60,7 +60,7 @@ let idField = TextField('id', { isRequired: true }),
     isListField = BooleanField('isListField', { defaultValue: false });
 
 Record._id = 'Record';
-Record.id = 'Record';
+Record.id = Record._id;
 Record.type = RecordType;
 Record.fields = [idField, typeField];
 Record.baseType = Record;
@@ -70,7 +70,7 @@ Record.isInnerType = false;
 Record.isPrimitiveType = false;
 
 Module._id = 'Module';
-Module.id = 'Module';
+Module.id = Module._id;
 Module.type = RecordType;
 Module.module = CoreModule;
 Module.fields = [idField, typeField, parentModuleField];
@@ -80,7 +80,7 @@ Module.isInnerType = false;
 Module.isPrimitiveType = false;
 
 Trait._id = 'Trait';
-Trait.id = 'Trait';
+Trait.id = Trait._id;
 Trait.type = RecordType;
 Trait.module = CoreModule;
 Trait.fields = [idField, typeField, moduleField, fieldsField, traitsField];
@@ -90,7 +90,7 @@ Trait.isInnerType = false;
 Trait.isPrimitiveType = false;
 
 RecordType._id = 'RecordType';
-RecordType.id = 'RecordType';
+RecordType.id = RecordType._id;
 RecordType.type = RecordType;
 RecordType.module = CoreModule;
 RecordType.fields = [idField, typeField, moduleField, fieldsField,
@@ -101,7 +101,7 @@ RecordType.isInnertType = false;
 RecordType.isPrimitiveType = false;
 
 Field._id = 'Field';
-Field.id = 'Field';
+Field.id = Field._id;
 Field.type = RecordType;
 Field.module = CoreModule;
 Field.fields = [idField, typeField, isRequiredField, isListField];
