@@ -7,5 +7,7 @@ module.exports = {
     ListField: require('./core/list-field'),
     NumberField: require('./core/number-field'),
     BooleanField: require('./core/boolean-field'),
-    TextField: require('./core/text-field')
+    TextField: require('./core/text-field'),
+    RootModule: require('./core/root-module'),
+    CoreModule: require('./core/core-module')
 };
