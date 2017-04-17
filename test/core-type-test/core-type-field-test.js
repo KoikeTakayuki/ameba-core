@@ -1,91 +1,91 @@
 let should = require('should'),
-    Module = require('../core/core-type').Module;
+    Field = require('../../core/core-type').Field;
 
-describe('RecordType', function() {
+describe('Field', function() {
 
   it ('should be an object', function () {
-    Module.should.be.an.Object();
+    Field.should.be.an.Object();
   });
 
   it ('should have 9 keys', function () {
-    Object.keys(Module).should.have.length(9);
+    Object.keys(Field).should.have.length(9);
   });
 
   it ('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    Module.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+    Field.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function() {
-    it('should be "Module"', function() {
-      Module.should.have.property('_id', 'Module');
+    it('should be "Field"', function() {
+      Field.should.have.property('_id', 'Field');
     });
   });
 
   describe('id', function() {
-    it('should be "Module"', function() {
-      Module.should.have.property('id', 'Module');
+    it('should be "Field"', function() {
+      Field.should.have.property('id', 'Field');
     });
   });
 
   describe('type', function() {
     it('should be an Object', function() {
-      Module.type.should.be.an.Object();
+      Field.type.should.be.an.Object();
     });
   
     it('should have id "RecordType"', function () {
-      Module.type.should.have.property('id', 'RecordType');
+      Field.type.should.have.property('id', 'RecordType');
     });
   });
 
   describe('module', function() {
     it('should be an Object', function() {
-      Module.module.should.be.an.Object();
+      Field.module.should.be.an.Object();
     });
 
     it('should have id "Core"', function () {
-      Module.module.should.have.property('id', 'Core');
+      Field.module.should.have.property('id', 'Core');
     });
   });
 
   describe('fields', function() {
     it('should be an Array', function() {
-      Module.fields.should.be.an.Array();
+      Field.fields.should.be.an.Array();
     });
 
-    it('should have 3 elements', function() {
-      Module.fields.should.be.length(3);
+    it('should have 6 elements', function() {
+      Field.fields.should.be.length(6);
     });
   });
 
   describe('traits', function() {
     it('should be an Array', function() {
-      Module.traits.should.be.an.Array();
+      Field.traits.should.be.an.Array();
     });
 
     it('should be empty', function() {
-      Module.traits.should.be.empty()
+      Field.traits.should.be.empty()
     });
   });
 
   describe('baseType', function() {
     it('should be an Object', function() {
-      Module.baseType.should.be.an.Object();
+      Field.baseType.should.be.an.Object();
     });
 
     it('should have id "Record"', function() {
-      Module.baseType.should.have.property('id', 'Record');
+      Field.baseType.should.have.property('id', 'Record');
     });
   });
 
   describe('isInnerType', function() {
-    it('should be false', function() {
-      Module.isInnerType.should.be.false();
+    it('should be true', function() {
+      Field.isInnerType.should.be.true();
     });
   });
 
   describe('isPrimitiveType', function() {
     it('should be false', function() {
-      Module.isPrimitiveType.should.be.false();
+      Field.isPrimitiveType.should.be.false();
     });
   });
 });
