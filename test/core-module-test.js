@@ -3,7 +3,7 @@ let should = require('should'),
 
 describe('CoreModule', function() {
 
-  it ('should be an object', function () {
+  it ('should be an Object', function () {
     CoreModule.should.be.an.Object();
   });
 
@@ -31,18 +31,18 @@ describe('CoreModule', function() {
     it('should be an Object', function() {
       CoreModule.type.should.be.an.Object();
     });
-  
-    it('should be Module', function () {
+
+    it('should have id "Module"', function () {
       CoreModule.type.should.have.property('id', 'Module');
     });
   });
 
   describe('parentModule', function() {
-    it('should be Object', function() {
+    it('should be an Object', function() {
       CoreModule.parentModule.should.be.an.Object();
     });
 
-    it('should be RootModule', function() {
+    it('should have id "RootModule"', function() {
       CoreModule.parentModule.should.have.property('id', 'Root');
     });
   });

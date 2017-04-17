@@ -3,7 +3,7 @@ let should = require('should'),
 
 describe('RootModule', function() {
 
-  it ('should be an object', function () {
+  it ('should be an Object', function () {
     RootModule.should.be.an.Object();
   });
 
@@ -32,7 +32,7 @@ describe('RootModule', function() {
       RootModule.type.should.be.an.Object();
     });
   
-    it('should be Module', function () {
+    it('should have id "Module"', function () {
       RootModule.type.should.have.property('id', 'Module');
     });
   });
