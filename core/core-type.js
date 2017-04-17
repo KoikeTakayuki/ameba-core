@@ -51,33 +51,14 @@ BooleanType.baseType = Record;
 BooleanType.isPrimitiveType = true;
 BooleanType.isInnerType = true;
 
-// Field Builders
-let TextField = require('./text-field'),
-    RecordField = require('./record-field'),
-    ListField = require('./list-field'),
-    NumberField = require('./number-field'),
-    BooleanField = require('./boolean-field');
-
 // CoreType Fields
-let idField = TextField('id', { isRequired: true }),
-    parentModuleField = RecordField('parentModule', Module),
-    typeField = RecordField('type', RecordType, { isRequired: true }),
-    moduleField = RecordField('module', Module),
-    fieldsField = ListField('fields', Field, { isRequired: true }),
-    baseTypeField = RecordField('baseType', RecordType),
-    traitsField = ListField('traits', Trait),
-    isPrimitiveTypeField = BooleanField('isPrimitiveType', { defaultValue: false }),
-    isInnerTypeField = BooleanField('isInnerType', { defaultValue: false }),
-    fieldTypeField = RecordField('fieldType', RecordType, { isRequired: true }),
-    isRequiredField = BooleanField('isRequired', { defaultValue: false }),
-    isListField = BooleanField('isListField', { defaultValue: false }),
-    defaultValueField = RecordField('defaultValue', Record);
+let CoreField = require('./core-field');
 
 Record._id = 'Record';
 Record.id = Record._id;
 Record.type = RecordType;
 Record.module = CoreModule;
-Record.fields = [idField, typeField];
+Record.fields = [CoreField.ID, CoreField.Type];
 Record.traits = [];
 Record.baseType = Record;
 Record.isInnerType = false;
@@ -87,7 +68,7 @@ Module._id = 'Module';
 Module.id = Module._id;
 Module.type = RecordType;
 Module.module = CoreModule;
-Module.fields = [idField, typeField, parentModuleField];
+Module.fields = [CoreField.ID, CoreField.Type, CoreField.ParentModule];
 Module.traits = [];
 Module.baseType = Record;
 Module.isInnerType = false;
@@ -97,7 +78,7 @@ Trait._id = 'Trait';
 Trait.id = Trait._id;
 Trait.type = RecordType;
 Trait.module = CoreModule;
-Trait.fields = [idField, typeField, moduleField, fieldsField, traitsField];
+Trait.fields = [CoreField.ID, CoreField.Type, CoreField.Module, CoreField.Fields, CoreField.Traits];
 Trait.traits = [];
 Trait.baseType = Record;
 Trait.isInnerType = false;
@@ -107,8 +88,8 @@ RecordType._id = 'RecordType';
 RecordType.id = RecordType._id;
 RecordType.type = RecordType;
 RecordType.module = CoreModule;
-RecordType.fields = [idField, typeField, moduleField, fieldsField,
-    traitsField, baseTypeField, isInnerTypeField, isPrimitiveTypeField];
+RecordType.fields = [CoreField.ID, CoreField.Type, CoreField.Module, CoreField.Fields, CoreField.Traits,
+    CoreField.BaseType, CoreField.IsInnerType, CoreField.IsPrimitiveType];
 RecordType.traits = [];
 RecordType.baseType = Trait;
 RecordType.isInnerType = false;
@@ -118,7 +99,7 @@ Field._id = 'Field';
 Field.id = Field._id;
 Field.type = RecordType;
 Field.module = CoreModule;
-Field.fields = [idField, typeField, fieldTypeField, isRequiredField, isListField, defaultValueField];
+Field.fields = [CoreField.ID, CoreField.Type, CoreField.FieldType, CoreField.IsRequired, CoreField.IsListField, CoreField.DefaultValue];
 Field.traits = [];
 Field.baseType = Record;
 Field.isInnerType = true;

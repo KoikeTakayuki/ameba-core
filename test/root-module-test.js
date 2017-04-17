@@ -39,7 +39,7 @@ describe('RootModule', function() {
 
   describe('parentModule', function() {
     it('should be null', function() {
-      should.not.exist(RootModule.parentModule);
+      should.equal(RootModule.parentModule, null);
     });
   });
 
