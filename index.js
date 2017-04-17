@@ -1,4 +1,5 @@
 module.exports = {
+    CoreType: require('./core/core-type'),
     Trait: require('./core/trait'),
     RecordType: require('./core/record-type'),
     Module: require('./core/module'),
@@ -6,6 +7,5 @@ module.exports = {
     ListField: require('./core/list-field'),
     NumberField: require('./core/number-field'),
     BooleanField: require('./core/boolean-field'),
-    TextField: require('./core/text-field'),
-    CoreType: require('./core/core-type'),
+    TextField: require('./core/text-field')
 };
