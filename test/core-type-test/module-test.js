@@ -52,8 +52,8 @@ describe('Module', function() {
       Module.fields.should.be.an.Array();
     });
 
-    it('should have 3 elements', function() {
-      Module.fields.should.be.length(3);
+    it('should have 1 elements', function() {
+      Module.fields.should.be.length(1);
     });
   });
 

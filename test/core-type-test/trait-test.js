@@ -52,8 +52,8 @@ describe('Trait', function() {
       Trait.fields.should.be.an.Array();
     });
 
-    it('should have 5 elements', function() {
-      Trait.fields.should.be.length(5);
+    it('should have 3 elements', function() {
+      Trait.fields.should.be.length(3);
     });
   });
 

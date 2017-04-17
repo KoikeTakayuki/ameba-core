@@ -53,7 +53,7 @@ describe('Field', function() {
     });
 
     it('should have 6 elements', function() {
-      Field.fields.should.be.length(6);
+      Field.fields.should.be.length(4);
     });
   });
 
