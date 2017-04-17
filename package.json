@@ -16,7 +16,7 @@
     "url": "https://github.com/KoikeTakayuki/ameba-core/issues"
   },
   "homepage": "https://github.com/KoikeTakayuki/ameba-core#readme",
-    "devDependencies": {
+  "devDependencies": {
     "mocha": "^3.2.0"
   }
 }
