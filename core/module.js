@@ -1,13 +1,13 @@
-const Core = require('./core');
+let CoreType = require('./core-type');
 
 module.exports = function (id, parentModule) {
     if (!parentModule) {
-        parentModule = Core.RootModule;
+        parentModule = CoreType.RootModule;
     }
 
     return {
         id: id,
-        type: Core.Module,
+        type: CoreType.Module,
         parentModule: parentModule
     };
 };

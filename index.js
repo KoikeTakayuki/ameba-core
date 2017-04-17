@@ -1,5 +1,3 @@
-const Core = require('./core/core')
-
 module.exports = {
     Trait: require('./core/trait'),
     RecordType: require('./core/record-type'),
@@ -9,8 +7,5 @@ module.exports = {
     NumberField: require('./core/number-field'),
     BooleanField: require('./core/boolean-field'),
     TextField: require('./core/text-field'),
-    TextType: Core.TextType,
-    BooleanType: Core.BooleanType,
-    NumberType: Core.NumberType,
-    MODULE_PATH_SEPARTOR: '.'
+    CoreType: require('./core/core-type'),
 };

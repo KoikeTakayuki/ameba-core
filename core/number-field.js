@@ -1,10 +1,10 @@
-const Core = require('./core');
-const Field = require('./field');
+let CoreType = require('./core-type'),
+    Field = require('./field');
 
 module.exports = function (id, args) {
-    const isRequired = !!(args && args.isRequired === true)
-    const isListField = false;
-    const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
+    let isRequired = !!(args && args.isRequired === true),
+        isListField = false;
+        defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
 
-    return Field(id, Core.NumberType, isRequired, isListField, defaultValue);
+    return Field(id, CoreType.NumberType, isRequired, isListField, defaultValue);
 };
