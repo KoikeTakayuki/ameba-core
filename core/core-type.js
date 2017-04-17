@@ -18,26 +18,38 @@ module.exports = {
     BooleanType: BooleanType
 };
 
+// CoreType Module
+let CoreModule = require('./core-module');
+
 TextType._id = 'TextType';
 TextType.id = TextType._id;
 TextType.type = RecordType;
+TextType.module = CoreModule;
+TextType.fields = [];
+TextType.traits = [];
+TextType.baseType = Record;
 TextType.isPrimitiveType = true;
 TextType.isInnerType = true;
 
 NumberType._id = 'NumberType';
 NumberType.id = NumberType._id;
 NumberType.type = RecordType;
+NumberType.module = CoreModule;
+NumberType.fields = [];
+NumberType.traits = [];
+NumberType.baseType = Record;
 NumberType.isPrimitiveType = true;
 NumberType.isInnerType = true;
 
 BooleanType._id = 'BooleanType';
 BooleanType.id = BooleanType._id;
 BooleanType.type = RecordType;
+BooleanType.module = CoreModule;
+BooleanType.fields = [];
+BooleanType.traits = [];
+BooleanType.baseType = Record;
 BooleanType.isPrimitiveType = true;
 BooleanType.isInnerType = true;
-
-// CoreType Module
-let CoreModule = require('./core-module');
 
 // Field Builders
 let TextField = require('./text-field'),
@@ -64,10 +76,10 @@ let idField = TextField('id', { isRequired: true }),
 Record._id = 'Record';
 Record.id = Record._id;
 Record.type = RecordType;
-Record.fields = [idField, typeField];
-Record.baseType = Record;
 Record.module = CoreModule;
+Record.fields = [idField, typeField];
 Record.traits = [];
+Record.baseType = Record;
 Record.isInnerType = false;
 Record.isPrimitiveType = false;
 
@@ -76,8 +88,8 @@ Module.id = Module._id;
 Module.type = RecordType;
 Module.module = CoreModule;
 Module.fields = [idField, typeField, parentModuleField];
-Module.baseType = Record;
 Module.traits = [];
+Module.baseType = Record;
 Module.isInnerType = false;
 Module.isPrimitiveType = false;
 
@@ -86,8 +98,8 @@ Trait.id = Trait._id;
 Trait.type = RecordType;
 Trait.module = CoreModule;
 Trait.fields = [idField, typeField, moduleField, fieldsField, traitsField];
-Trait.baseType = Record;
 Trait.traits = [];
+Trait.baseType = Record;
 Trait.isInnerType = false;
 Trait.isPrimitiveType = false;
 
