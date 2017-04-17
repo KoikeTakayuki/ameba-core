@@ -7,7 +7,7 @@ describe('RootModule', function() {
     RootModule.should.be.an.Object();
   });
 
-  it ('should have four keys', function () {
+  it ('should have 4 keys', function () {
     Object.keys(RootModule).should.have.length(4);
   });
 
