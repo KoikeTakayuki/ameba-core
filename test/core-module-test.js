@@ -42,7 +42,7 @@ describe('CoreModule', function() {
       CoreModule.parentModule.should.be.an.Object();
     });
 
-    it('should have id "RootModule"', function() {
+    it('should have id "Root"', function() {
       CoreModule.parentModule.should.have.property('id', 'Root');
     });
   });

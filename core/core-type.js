@@ -56,8 +56,10 @@ let idField = TextField('id', { isRequired: true }),
     traitsField = ListField('traits', Trait),
     isPrimitiveTypeField = BooleanField('isPrimitiveType', { defaultValue: false }),
     isInnerTypeField = BooleanField('isInnerType', { defaultValue: false }),
-    isRequiredField = BooleanField('isRequiredField', { defaultValue: false }),
-    isListField = BooleanField('isListField', { defaultValue: false });
+    fieldTypeField = RecordField('fieldType', RecordType, { isRequired: true }),
+    isRequiredField = BooleanField('isRequired', { defaultValue: false }),
+    isListField = BooleanField('isListField', { defaultValue: false }),
+    defaultValueField = RecordField('defaultValue', Record);
 
 Record._id = 'Record';
 Record.id = Record._id;
@@ -97,14 +99,15 @@ RecordType.fields = [idField, typeField, moduleField, fieldsField,
     traitsField, baseTypeField, isInnerTypeField, isPrimitiveTypeField];
 RecordType.traits = [];
 RecordType.baseType = Trait;
-RecordType.isInnertType = false;
+RecordType.isInnerType = false;
 RecordType.isPrimitiveType = false;
 
 Field._id = 'Field';
 Field.id = Field._id;
 Field.type = RecordType;
 Field.module = CoreModule;
-Field.fields = [idField, typeField, isRequiredField, isListField];
+Field.fields = [idField, typeField, fieldTypeField, isRequiredField, isListField, defaultValueField];
+Field.traits = [];
 Field.baseType = Record;
 Field.isInnerType = true;
 Field.isPrimitiveType = false;
