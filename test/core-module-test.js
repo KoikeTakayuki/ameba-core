@@ -16,14 +16,14 @@ describe('CoreModule', function() {
   });
 
   describe('_id', function() {
-    it('should be "Root"', function() {
-      CoreModule.should.have.property('_id', 'Root');
+    it('should be "Core"', function() {
+      CoreModule.should.have.property('_id', 'Core');
     });
   });
 
   describe('id', function() {
-    it('should be "Root"', function() {
-      CoreModule.should.have.property('id', 'Root');
+    it('should be "Core"', function() {
+      CoreModule.should.have.property('id', 'Core');
     });
   });
 
@@ -32,14 +32,18 @@ describe('CoreModule', function() {
       CoreModule.type.should.be.an.Object();
     });
   
-    it('should have id "Module"', function () {
+    it('should be Module', function () {
       CoreModule.type.should.have.property('id', 'Module');
     });
   });
 
   describe('parentModule', function() {
-    it('should be null', function() {
-      should.not.exist(CoreModule.parentModule);
+    it('should be Object', function() {
+      CoreModule.parentModule.should.be.an.Object();
+    });
+
+    it('should be RootModule', function() {
+      CoreModule.parentModule.should.have.property('id', 'Root');
     });
   });
 

@@ -32,7 +32,7 @@ describe('RootModule', function() {
       RootModule.type.should.be.an.Object();
     });
   
-    it('should have id "Module"', function () {
+    it('should be Module', function () {
       RootModule.type.should.have.property('id', 'Module');
     });
   });
