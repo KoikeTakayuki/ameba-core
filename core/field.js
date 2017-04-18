@@ -1,9 +1,9 @@
-let CoreType = require('./core-type');
+let Types = require('./types');
 
 module.exports = function (id, fieldType, isRequired, isListField, defaultValue) {
     return {
         id: id,
-        type: CoreType.Field,
+        type: Types.Field,
         fieldType: fieldType,
         isRequired: isRequired,
         isListField: isListField,

@@ -1,5 +1,5 @@
 let should = require('should'),
-    BooleanType = require('../../core/core-type').BooleanType;
+    BooleanType = require('../../core/types').BooleanType;
 
 describe('BooleanType', function() {
 

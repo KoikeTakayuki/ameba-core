@@ -1,5 +1,5 @@
 let should = require('should'),
-    Record = require('../../core/core-type').Record;
+    Record = require('../../core/types').Record;
 
 describe('Record', function() {
 

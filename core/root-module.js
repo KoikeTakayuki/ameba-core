@@ -1,8 +1,8 @@
-let RootModule = module.exports = {};
+let rootModule = module.exports = {};
 
-let ModuleType = require('./core-type').Module;
+let ModuleType = require('./types').Module;
 
-RootModule._id = 'Root';
-RootModule.id = RootModule._id;
-RootModule.type = ModuleType;
-RootModule.parentModule = null;
+rootModule._id = 'Root';
+rootModule.id = rootModule._id;
+rootModule.type = ModuleType;
+rootModule.parentModule = null;

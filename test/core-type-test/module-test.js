@@ -1,5 +1,5 @@
 let should = require('should'),
-    Module = require('../../core/core-type').Module;
+    Module = require('../../core/types').Module;
 
 describe('Module', function() {
 

@@ -1,4 +1,4 @@
-let CoreType = require('./core-type'),
+let Types = require('./types'),
     Field = require('./field');
 
 module.exports = function (id, args) {
@@ -6,5 +6,5 @@ module.exports = function (id, args) {
         isListField = false,
         defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
 
-    return Field(id, CoreType.TextType, isRequired, isListField, defaultValue);
+    return Field(id, Types.TextType, isRequired, isListField, defaultValue);
 };

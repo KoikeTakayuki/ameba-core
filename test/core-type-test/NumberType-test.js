@@ -1,5 +1,5 @@
 let should = require('should'),
-    NumberType = require('../../core/core-type').NumberType;
+    NumberType = require('../../core/types').NumberType;
 
 describe('NumberType', function() {
 

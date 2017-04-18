@@ -1,5 +1,5 @@
 let should = require('should'),
-    Field = require('../../core/core-type').Field;
+    Field = require('../../core/types').Field;
 
 describe('Field', function() {
 

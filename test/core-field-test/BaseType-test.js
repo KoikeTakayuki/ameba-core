@@ -1,65 +1,65 @@
 let should = require('should'),
-    BaseTypeField = require('../../core/core-field').BaseType;
+    baseTypeField = require('../../core/fields').baseType;
 
-describe('BaseTypeField', function () {
+describe('baseTypeField', function () {
 
     it('should be an object', function () {
-        BaseTypeField.should.be.an.Object();
+        baseTypeField.should.be.an.Object();
     });
 
     it('should have 6 keys', function () {
-        Object.keys(BaseTypeField).should.have.length(6);
+        Object.keys(baseTypeField).should.have.length(6);
     });
 
     it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-        BaseTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+        baseTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
     });
 
     describe('id', function () {
         it('should be "baseType"', function () {
-            BaseTypeField.should.have.property('id', 'baseType');
+            baseTypeField.should.have.property('id', 'baseType');
         });
     });
 
     describe('type', function () {
         it('should be an Object', function () {
-            BaseTypeField.type.should.be.an.Object();
+            baseTypeField.type.should.be.an.Object();
         });
 
         it('should have id "Field"', function () {
-            BaseTypeField.type.should.have.property('id', 'Field');
+            baseTypeField.type.should.have.property('id', 'Field');
         });
     });
 
     describe('fieldType', function () {
         it('should be an Object', function () {
-            BaseTypeField.fieldType.should.be.an.Object();
+            baseTypeField.fieldType.should.be.an.Object();
         });
 
         it('should have id "RecordType"', function () {
-            BaseTypeField.fieldType.should.have.property('id', 'RecordType');
+            baseTypeField.fieldType.should.have.property('id', 'RecordType');
         });
     });
 
     describe('isRequired', function () {
         it('should be false', function () {
-            BaseTypeField.isRequired.should.be.false();
+            baseTypeField.isRequired.should.be.false();
         });
     });
 
     describe('isListField', function () {
         it('should be false', function () {
-            BaseTypeField.isListField.should.be.false();
+            baseTypeField.isListField.should.be.false();
         });
     });
 
     describe('defaultValue', function () {
         it('should be an Object', function () {
-            BaseTypeField.defaultValue.should.be.an.Object();
+            baseTypeField.defaultValue.should.be.an.Object();
         });
 
         it('should have id "Record"', function () {
-            BaseTypeField.defaultValue.should.have.property('id', 'Record');
+            baseTypeField.defaultValue.should.have.property('id', 'Record');
         });
     });
 

@@ -1,5 +1,5 @@
 let should = require('should'),
-    Trait = require('../../core/core-type').Trait;
+    Trait = require('../../core/types').Trait;
 
 describe('Trait', function() {
 

@@ -1,5 +1,5 @@
 let should = require('should'),
-    TextType = require('../../core/core-type').TextType;
+    TextType = require('../../core/types').TextType;
 
 describe('TextType', function() {
 

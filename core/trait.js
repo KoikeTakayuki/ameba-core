@@ -1,10 +1,10 @@
-let CoreType = require('./core-type');
+let Types = require('./types');
 
 module.exports = function (module, id, fields, args) {
     return {
         module: module,
         id: id,
-        type: CoreType.Trait,
+        type: Types.Trait,
         fields: fields,
         traits: (args && args.traits) ? args.traits : []
     };
