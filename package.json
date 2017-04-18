@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KoikeTakayuki/ameba-mongodb-store.git"
+    "url": "git+https://github.com/KoikeTakayuki/ameba-core.git"
   },
   "author": "KoikeTakayuki",
   "license": "MIT",
