@@ -2,14 +2,15 @@
 [![Code Climate](https://codeclimate.com/github/koiketakayuki/ameba-core/badges/gpa.svg)](https://codeclimate.com/github/koiketakayuki/ameba-core)
 [![Test Coverage](https://codeclimate.com/github/koiketakayuki/ameba-core/badges/coverage.svg)](https://codeclimate.com/github/koiketakayuki/ameba-core/coverage)
 [![Issue Count](https://codeclimate.com/github/koiketakayuki/ameba-core/badges/issue_count.svg)](https://codeclimate.com/github/koiketakayuki/ameba-core)
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
 
 
 # ameba-core
 
 **ameba-core** is the core library for Ameba.
 
-This provides **Record**, **RecordType**, **Trait**, **Field**, **Module**.
+This provides 5 primitive types: **Record**, **RecordType**, **Trait**, **Field**, **Module**.
 
-Using this, developers can create any model as if they
+Using this, Developers can create any model as if
 
-create object in OOP-language without concerning about database.
+they create object in OOP-language, which can easily connect with DB.
