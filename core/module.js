@@ -1,7 +1,7 @@
 const Types = require('./types');
 const rootModule = require('./root-module');
 
-function module(id, parentModule) {
+function Module(id, parentModule) {
   return {
     id,
     type: Types.Module,
@@ -9,4 +9,4 @@ function module(id, parentModule) {
   };
 }
 
-module.exports = module;
+module.exports = Module;

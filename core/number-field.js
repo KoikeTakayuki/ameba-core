@@ -1,7 +1,7 @@
 const Types = require('./types');
 const Field = require('./field');
 
-function numberField(id, args) {
+function NumberField(id, args) {
   const isRequired = !!(args && args.isRequired === true);
   const isListField = false;
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
@@ -9,4 +9,4 @@ function numberField(id, args) {
   return Field(id, Types.NumberType, isRequired, isListField, defaultValue);
 }
 
-module.exports = numberField;
+module.exports = NumberField;

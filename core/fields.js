@@ -4,30 +4,30 @@ module.exports = Fields;
 const Types = require('./types');
 
 // Field Builders
-const textField = require('./text-field');
-const recordField = require('./record-field');
-const listField = require('./list-field');
-const booleanField = require('./boolean-field');
+const TextField = require('./text-field');
+const RecordField = require('./record-field');
+const ListField = require('./list-field');
+const BooleanField = require('./boolean-field');
 
 // Record Field
-Fields.id = textField('id', { isRequired: true });
-Fields.type = recordField('type', Types.RecordType, { isRequired: true });
+Fields.id = TextField('id', { isRequired: true });
+Fields.type = RecordField('type', Types.RecordType, { isRequired: true });
 
 // Trait Fields
-Fields.module = recordField('module', Types.Module, { isRequired: true });
-Fields.fields = listField('fields', Types.Field, { isRequired: true });
-Fields.traits = listField('traits', Types.Trait, { defaultValue: [] });
+Fields.module = RecordField('module', Types.Module, { isRequired: true });
+Fields.fields = ListField('fields', Types.Field, { isRequired: true });
+Fields.traits = ListField('traits', Types.Trait, { defaultValue: [] });
 
 // RecordType Fields
-Fields.baseType = recordField('baseType', Types.RecordType, { defaultValue: Types.Record });
-Fields.isInnerType = booleanField('isInnerType', { defaultValue: false });
-Fields.isPrimitiveType = booleanField('isPrimitiveType', { defaultValue: false });
+Fields.baseType = RecordField('baseType', Types.RecordType, { defaultValue: Types.Record });
+Fields.isInnerType = BooleanField('isInnerType', { defaultValue: false });
+Fields.isPrimitiveType = BooleanField('isPrimitiveType', { defaultValue: false });
 
 // Field Fields
-Fields.fieldType = recordField('fieldType', Types.RecordType, { isRequired: true });
-Fields.isRequired = booleanField('isRequired', { defaultValue: false });
-Fields.isListField = booleanField('isListField', { defaultValue: false });
-Fields.defaultValue = recordField('defaultValue', Types.Record);
+Fields.fieldType = RecordField('fieldType', Types.RecordType, { isRequired: true });
+Fields.isRequired = BooleanField('isRequired', { defaultValue: false });
+Fields.isListField = BooleanField('isListField', { defaultValue: false });
+Fields.defaultValue = RecordField('defaultValue', Types.Record);
 
 // Module Fields
-Fields.parentModule = recordField('parentModule', Types.Module, { isRequired: true });
+Fields.parentModule = RecordField('parentModule', Types.Module, { isRequired: true });

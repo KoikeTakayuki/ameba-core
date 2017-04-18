@@ -1,8 +1,8 @@
 const Types = require('./types');
 const Trait = require('./trait');
 
-function recordType(module, id, fields, args) {
-  const result = Trait(module, id, fields, args);
+function RecordType(moduleRecord, id, fields, args) {
+  const result = Trait(moduleRecord, id, fields, args);
   result.type = Types.RecordType;
   result.baseType = args && args.baseType ? args.baseType : Types.Record;
   result.isInnerType = !!(args && args.isInnerType === true);
@@ -11,4 +11,4 @@ function recordType(module, id, fields, args) {
   return result;
 }
 
-module.exports = recordType;
+module.exports = RecordType;
