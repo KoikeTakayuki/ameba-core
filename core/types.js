@@ -1,25 +1,25 @@
-let Record = {},
-    Trait = {},
-    RecordType = {},
-    Field = {},
-    Module = {},
-    TextType = {},
-    NumberType = {},
-    BooleanType = {};
+const Record = {};
+const Trait = {};
+const RecordType = {};
+const Field = {};
+const Module = {};
+const TextType = {};
+const NumberType = {};
+const BooleanType = {};
 
 module.exports = {
-    Record: Record,
-    Trait: Trait,
-    RecordType: RecordType,
-    Field: Field,
-    Module: Module,
-    TextType: TextType,
-    NumberType: NumberType,
-    BooleanType: BooleanType
+  Record,
+  Trait,
+  RecordType,
+  Field,
+  Module,
+  TextType,
+  NumberType,
+  BooleanType,
 };
 
 // Types Module
-let coreModule = require('./core-module');
+const coreModule = require('./core-module');
 
 TextType._id = 'TextType';
 TextType.id = TextType._id;
@@ -52,7 +52,7 @@ BooleanType.isPrimitiveType = true;
 BooleanType.isInnerType = true;
 
 // Types Fields
-let Fields = require('./fields');
+const Fields = require('./fields');
 
 Record._id = 'Record';
 Record.id = Record._id;

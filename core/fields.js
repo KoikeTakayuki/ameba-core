@@ -1,12 +1,13 @@
-let Fields = module.exports = {},
-    Types = require('./types');
+const Fields = {};
+module.exports = Fields;
+
+const Types = require('./types');
 
 // Field Builders
-let textField = require('./text-field'),
-    recordField = require('./record-field'),
-    listField = require('./list-field'),
-    numberField = require('./number-field'),
-    booleanField = require('./boolean-field');
+const textField = require('./text-field');
+const recordField = require('./record-field');
+const listField = require('./list-field');
+const booleanField = require('./boolean-field');
 
 // Record Field
 Fields.id = textField('id', { isRequired: true });

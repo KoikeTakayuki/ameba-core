@@ -1,62 +1,60 @@
-let should = require('should'),
-    isInnerTypeField = require('../../core/fields').isInnerType;
+const should = require('should');
+const isInnerTypeField = require('../../core/fields').isInnerType;
 
-describe('isInnerTypeField', function () {
+describe('isInnerTypeField', () => {
+  it('should be an object', () => {
+    isInnerTypeField.should.be.an.Object();
+  });
 
-    it('should be an object', function () {
-        isInnerTypeField.should.be.an.Object();
+  it('should have 6 keys', () => {
+    Object.keys(isInnerTypeField).should.have.length(6);
+  });
+
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+    isInnerTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+  });
+
+  describe('id', () => {
+    it('should be "isInnerType"', () => {
+      isInnerTypeField.should.have.property('id', 'isInnerType');
+    });
+  });
+
+  describe('type', () => {
+    it('should be an Object', () => {
+      isInnerTypeField.type.should.be.an.Object();
     });
 
-    it('should have 6 keys', function () {
-        Object.keys(isInnerTypeField).should.have.length(6);
+    it('should have id "Field"', () => {
+      isInnerTypeField.type.should.have.property('id', 'Field');
+    });
+  });
+
+  describe('fieldType', () => {
+    it('should be an Object', () => {
+      isInnerTypeField.fieldType.should.be.an.Object();
     });
 
-    it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-        isInnerTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+    it('should have id "BooleanType"', () => {
+      isInnerTypeField.fieldType.should.have.property('id', 'BooleanType');
     });
+  });
 
-    describe('id', function () {
-        it('should be "isInnerType"', function () {
-            isInnerTypeField.should.have.property('id', 'isInnerType');
-        });
+  describe('isRequired', () => {
+    it('should be false', () => {
+      isInnerTypeField.isRequired.should.be.false();
     });
+  });
 
-    describe('type', function () {
-        it('should be an Object', function () {
-            isInnerTypeField.type.should.be.an.Object();
-        });
-
-        it('should have id "Field"', function () {
-            isInnerTypeField.type.should.have.property('id', 'Field');
-        });
+  describe('isListField', () => {
+    it('should be false', () => {
+      isInnerTypeField.isListField.should.be.false();
     });
+  });
 
-    describe('fieldType', function () {
-        it('should be an Object', function () {
-            isInnerTypeField.fieldType.should.be.an.Object();
-        });
-
-        it('should have id "BooleanType"', function () {
-            isInnerTypeField.fieldType.should.have.property('id', 'BooleanType');
-        });
+  describe('defaultValue', () => {
+    it('should be false', () => {
+      isInnerTypeField.defaultValue.should.be.false();
     });
-
-    describe('isRequired', function () {
-        it('should be false', function () {
-            isInnerTypeField.isRequired.should.be.false();
-        });
-    });
-
-    describe('isListField', function () {
-        it('should be false', function () {
-            isInnerTypeField.isListField.should.be.false();
-        });
-    });
-
-    describe('defaultValue', function () {
-        it('should be false', function () {
-            isInnerTypeField.defaultValue.should.be.false();
-        });
-    });
-
+  });
 });

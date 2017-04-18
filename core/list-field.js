@@ -1,9 +1,11 @@
-let Field = require('./field');
+const Field = require('./field');
 
-module.exports = function (id, fieldType, args) {
-    let isRequired = !!(args && args.isRequired === true),
-        isListField = true,
-        defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
+function listField(id, fieldType, args) {
+  const isRequired = !!(args && args.isRequired === true);
+  const isListField = true;
+  const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
 
-    return Field(id, fieldType, isRequired, isListField, defaultValue);
-};
+  return Field(id, fieldType, isRequired, isListField, defaultValue);
+}
+
+module.exports = listField;

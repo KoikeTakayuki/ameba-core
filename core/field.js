@@ -1,12 +1,14 @@
-let Types = require('./types');
+const Types = require('./types');
 
-module.exports = function (id, fieldType, isRequired, isListField, defaultValue) {
-    return {
-        id: id,
-        type: Types.Field,
-        fieldType: fieldType,
-        isRequired: isRequired,
-        isListField: isListField,
-        defaultValue: defaultValue
-    };
-};
+function field(id, fieldType, isRequired, isListField, defaultValue) {
+  return {
+    id,
+    type: Types.Field,
+    fieldType,
+    isRequired,
+    isListField,
+    defaultValue,
+  };
+}
+
+module.exports = field;

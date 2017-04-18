@@ -1,62 +1,60 @@
-let should = require('should'),
-    isPrimitiveTypeField = require('../../core/fields').isPrimitiveType;
+const should = require('should');
+const isPrimitiveTypeField = require('../../core/fields').isPrimitiveType;
 
-describe('isPrimitiveTypeField', function () {
+describe('isPrimitiveTypeField', () => {
+  it('should be an object', () => {
+    isPrimitiveTypeField.should.be.an.Object();
+  });
 
-    it('should be an object', function () {
-        isPrimitiveTypeField.should.be.an.Object();
+  it('should have 6 keys', () => {
+    Object.keys(isPrimitiveTypeField).should.have.length(6);
+  });
+
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+    isPrimitiveTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+  });
+
+  describe('id', () => {
+    it('should be "isPrimitiveType"', () => {
+      isPrimitiveTypeField.should.have.property('id', 'isPrimitiveType');
+    });
+  });
+
+  describe('type', () => {
+    it('should be an Object', () => {
+      isPrimitiveTypeField.type.should.be.an.Object();
     });
 
-    it('should have 6 keys', function () {
-        Object.keys(isPrimitiveTypeField).should.have.length(6);
+    it('should have id "Field"', () => {
+      isPrimitiveTypeField.type.should.have.property('id', 'Field');
+    });
+  });
+
+  describe('fieldType', () => {
+    it('should be an Object', () => {
+      isPrimitiveTypeField.fieldType.should.be.an.Object();
     });
 
-    it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-        isPrimitiveTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+    it('should have id "BooleanType"', () => {
+      isPrimitiveTypeField.fieldType.should.have.property('id', 'BooleanType');
     });
+  });
 
-    describe('id', function () {
-        it('should be "isPrimitiveType"', function () {
-            isPrimitiveTypeField.should.have.property('id', 'isPrimitiveType');
-        });
+  describe('isRequired', () => {
+    it('should be false', () => {
+      isPrimitiveTypeField.isRequired.should.be.false();
     });
+  });
 
-    describe('type', function () {
-        it('should be an Object', function () {
-            isPrimitiveTypeField.type.should.be.an.Object();
-        });
-
-        it('should have id "Field"', function () {
-            isPrimitiveTypeField.type.should.have.property('id', 'Field');
-        });
+  describe('isListField', () => {
+    it('should be false', () => {
+      isPrimitiveTypeField.isListField.should.be.false();
     });
+  });
 
-    describe('fieldType', function () {
-        it('should be an Object', function () {
-            isPrimitiveTypeField.fieldType.should.be.an.Object();
-        });
-
-        it('should have id "BooleanType"', function () {
-            isPrimitiveTypeField.fieldType.should.have.property('id', 'BooleanType');
-        });
+  describe('defaultValue', () => {
+    it('should be false', () => {
+      isPrimitiveTypeField.defaultValue.should.be.false();
     });
-
-    describe('isRequired', function () {
-        it('should be false', function () {
-            isPrimitiveTypeField.isRequired.should.be.false();
-        });
-    });
-
-    describe('isListField', function () {
-        it('should be false', function () {
-            isPrimitiveTypeField.isListField.should.be.false();
-        });
-    });
-
-    describe('defaultValue', function () {
-        it('should be false', function () {
-            isPrimitiveTypeField.defaultValue.should.be.false();
-        });
-    });
-
+  });
 });

@@ -1,6 +1,7 @@
-let rootModule = module.exports = {};
+const rootModule = {};
+const ModuleType = require('./types').Module;
 
-let ModuleType = require('./types').Module;
+module.exports = rootModule;
 
 rootModule._id = 'Root';
 rootModule.id = rootModule._id;

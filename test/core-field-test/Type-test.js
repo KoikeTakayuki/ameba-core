@@ -1,62 +1,60 @@
-let should = require('should'),
-    typeField = require('../../core/fields').type;
+const should = require('should');
+const typeField = require('../../core/fields').type;
 
-describe('typeField', function () {
+describe('typeField', () => {
+  it('should be an object', () => {
+    typeField.should.be.an.Object();
+  });
 
-    it('should be an object', function () {
-        typeField.should.be.an.Object();
+  it('should have 6 keys', () => {
+    Object.keys(typeField).should.have.length(6);
+  });
+
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+    typeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+  });
+
+  describe('id', () => {
+    it('should be "type"', () => {
+      typeField.should.have.property('id', 'type');
+    });
+  });
+
+  describe('type', () => {
+    it('should be an Object', () => {
+      typeField.type.should.be.an.Object();
     });
 
-    it('should have 6 keys', function () {
-        Object.keys(typeField).should.have.length(6);
+    it('should have id "Field"', () => {
+      typeField.type.should.have.property('id', 'Field');
+    });
+  });
+
+  describe('fieldType', () => {
+    it('should be an Object', () => {
+      typeField.fieldType.should.be.an.Object();
     });
 
-    it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-        typeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+    it('should have id "RecordType"', () => {
+      typeField.fieldType.should.have.property('id', 'RecordType');
     });
+  });
 
-    describe('id', function () {
-        it('should be "type"', function () {
-            typeField.should.have.property('id', 'type');
-        });
+  describe('isRequired', () => {
+    it('should be true', () => {
+      typeField.isRequired.should.be.true();
     });
+  });
 
-    describe('type', function () {
-        it('should be an Object', function () {
-            typeField.type.should.be.an.Object();
-        });
-
-        it('should have id "Field"', function () {
-            typeField.type.should.have.property('id', 'Field');
-        });
+  describe('isListField', () => {
+    it('should be false', () => {
+      typeField.isListField.should.be.false();
     });
+  });
 
-    describe('fieldType', function () {
-        it('should be an Object', function () {
-            typeField.fieldType.should.be.an.Object();
-        });
-
-        it('should have id "RecordType"', function () {
-            typeField.fieldType.should.have.property('id', 'RecordType');
-        });
+  describe('defaultValue', () => {
+    it('should be undefined', () => {
+      should.equal(typeField.defaultValue, undefined);
     });
-
-    describe('isRequired', function () {
-        it('should be true', function () {
-            typeField.isRequired.should.be.true();
-        });
-    });
-
-    describe('isListField', function () {
-        it('should be false', function () {
-            typeField.isListField.should.be.false();
-        });
-    });
-
-    describe('defaultValue', function () {
-        it('should be undefined', function () {
-            should.equal(typeField.defaultValue, undefined);
-        });
-    });
-
+  });
 });

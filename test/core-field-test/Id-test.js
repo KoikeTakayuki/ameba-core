@@ -1,62 +1,60 @@
-let should = require('should'),
-    idField = require('../../core/fields').id;
+const should = require('should');
+const idField = require('../../core/fields').id;
 
-describe('idField', function () {
+describe('idField', () => {
+  it('should be an object', () => {
+    idField.should.be.an.Object();
+  });
 
-    it('should be an object', function () {
-        idField.should.be.an.Object();
+  it('should have 6 keys', () => {
+    Object.keys(idField).should.have.length(6);
+  });
+
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+    idField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+  });
+
+  describe('id', () => {
+    it('should be "id"', () => {
+      idField.should.have.property('id', 'id');
+    });
+  });
+
+  describe('type', () => {
+    it('should be an Object', () => {
+      idField.type.should.be.an.Object();
     });
 
-    it('should have 6 keys', function () {
-        Object.keys(idField).should.have.length(6);
+    it('should have id "Field"', () => {
+      idField.type.should.have.property('id', 'Field');
+    });
+  });
+
+  describe('fieldType', () => {
+    it('should be an Object', () => {
+      idField.fieldType.should.be.an.Object();
     });
 
-    it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-        idField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+    it('should have id "TextType"', () => {
+      idField.fieldType.should.have.property('id', 'TextType');
     });
+  });
 
-    describe('id', function () {
-        it('should be "id"', function () {
-            idField.should.have.property('id', 'id');
-        });
+  describe('isRequired', () => {
+    it('should be true', () => {
+      idField.isRequired.should.be.true();
     });
+  });
 
-    describe('type', function () {
-        it('should be an Object', function () {
-            idField.type.should.be.an.Object();
-        });
-
-        it('should have id "Field"', function () {
-            idField.type.should.have.property('id', 'Field');
-        });
+  describe('isListField', () => {
+    it('should be false', () => {
+      idField.isListField.should.be.false();
     });
+  });
 
-    describe('fieldType', function () {
-        it('should be an Object', function () {
-            idField.fieldType.should.be.an.Object();
-        });
-
-        it('should have id "TextType"', function () {
-            idField.fieldType.should.have.property('id', 'TextType');
-        });
+  describe('defaultValue', () => {
+    it('should be undefined', () => {
+      should.equal(idField.defaultValue, undefined);
     });
-
-    describe('isRequired', function () {
-        it('should be true', function () {
-            idField.isRequired.should.be.true();
-        });
-    });
-
-    describe('isListField', function () {
-        it('should be false', function () {
-            idField.isListField.should.be.false();
-        });
-    });
-
-    describe('defaultValue', function () {
-        it('should be undefined', function () {
-            should.equal(idField.defaultValue, undefined);
-        });
-    });
-
+  });
 });

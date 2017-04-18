@@ -1,13 +1,12 @@
-let Types = require('./types');
+const Types = require('./types');
+const rootModule = require('./root-module');
 
-module.exports = function (id, parentModule) {
-    if (!parentModule) {
-        parentModule = Types.rootModule;
-    }
+function module(id, parentModule) {
+  return {
+    id,
+    type: Types.Module,
+    parentModule: parentModule || rootModule,
+  };
+}
 
-    return {
-        id: id,
-        type: Types.Module,
-        parentModule: parentModule
-    };
-};
+module.exports = module;
