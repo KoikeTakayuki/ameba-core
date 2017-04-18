@@ -5,4 +5,7 @@ node_js:
 sudo: false
 cache:
   directories:
-    - node_modules
+    - 
+addons:
+  code_climate:
+    repo_token: 4300ee747dffc73847d1a112efe094120811386c2a27e2fc6a3017787ed9355e
