@@ -1,3 +1,4 @@
+[![npm version](https://badge.fury.io/js/ameba-core.svg)](https://badge.fury.io/js/ameba-core)
 [![Build Status](https://travis-ci.org/koiketakayuki/ameba-core.svg?branch=master)](https://travis-ci.org/koiketakayuki/ameba-core)
 [![Code Climate](https://codeclimate.com/github/koiketakayuki/ameba-core/badges/gpa.svg)](https://codeclimate.com/github/koiketakayuki/ameba-core)
 [![Test Coverage](https://codeclimate.com/github/koiketakayuki/ameba-core/badges/coverage.svg)](https://codeclimate.com/github/koiketakayuki/ameba-core/coverage)
