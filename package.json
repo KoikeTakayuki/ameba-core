@@ -1,6 +1,6 @@
 {
   "name": "ameba-core",
-  "version": "0.9.1",
+  "version": "0.9.2",
   "description": "ameba core code",
   "main": "index.js",
   "scripts": {
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/KoikeTakayuki/ameba-core.git"
+    "url": "git+https://github.com/koiketakayuki/ameba-core.git"
   },
-  "author": "KoikeTakayuki",
+  "author": "koiketakayuki",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/KoikeTakayuki/ameba-core/issues"
+    "url": "https://github.com/koiketakayuki/ameba-core/issues"
   },
-  "homepage": "https://github.com/KoikeTakayuki/ameba-core#readme",
+  "homepage": "https://github.com/koiketakayuki/ameba-core#readme",
   "devDependencies": {
     "codeclimate-test-reporter": "^0.4.1",
     "eslint": "^3.19.0",
