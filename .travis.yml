@@ -5,7 +5,6 @@ node_js:
 after_success:
   - npm install -g codeclimate-test-reporter
   - codeclimate-test-reporter < coverage/lcov.info
-  - npm publish
 sudo: false
 cache:
   directories:
@@ -13,3 +12,9 @@ cache:
 addons:
   code_climate:
     repo_token: 4300ee747dffc73847d1a112efe094120811386c2a27e2fc6a3017787ed9355e
+dd:
+  secure: iaw7yL3RF0nudA1kQa8m76eGBQcZJPqtDs9kJxwaB/yvdkPMk16NYaF9PM3Zus56HoxEt4e/pyuDKUrwTOwzdRiW12FXn2Z30rZofmdU0rRWgamezecuWR8TJRGE1j/fxsb9lH5gUakE6/ZzfDuToDyTzc08/U1TbUgk2+efo/0b6pR1r1CwfikAb8leGJoT5VgyArYPIElr08Xu0JK9DC9Su81Uq8/mw0ZTX0VIxflzHT8CelR0WIAEuA9pzShRJUm9yXODoQ1wNnpVwJ1/zp4cnWbEf1yXTGB6Wj1KU5R8WzspDtYER5cGIglKmMmmbOaLKD3jYWXFQTGhaZc+Y+mrtM0SKEXir1xU3bLRBCZgCYwZlI2AV3nh9HO5IOeCBzz2q7eNw9wgUlggj77rsna3Rs3UxZRc6lYOgc9h3OYS2lVDyuIOwBS/r7NXiAMDqjkJWKmaOI4YV37y2ApqF7TC0I1nBK4fd2m30xH1otnf02B5Oxp7CG0fk+qMoE59lZK37wXVVMjvfOTiRaL2YCro0EkcA4r77g4xL2tL4J80Do/AKU6yY7ETleoTM0uW2useaU3ZB3sJWRdLMSHipfzi7LqWSkJz97Vh1ASsykt0fKvjOV4gwssFV4DQso9nHWzaCrLt6XEeqYqemoenQHcTk75Fro41CcVMG8arvCc=
+deploy:
+api_key:
+email: koike.takayuki0907@gmail.com
+provider: npm
