@@ -6,23 +6,23 @@ describe('Record', function () {
     Record.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(Record).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(Record).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    Record.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    Record.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "Record"', function () {
-      Record.should.have.property('_id', 'Record');
+    it('should be "Core.Record"', function () {
+      Record.should.have.property('_id', 'Core.Record');
     });
   });
 
   describe('id', function () {
-    it('should be "Record"', function () {
-      Record.should.have.property('id', 'Record');
+    it('should be "Core.Record"', function () {
+      Record.should.have.property('id', 'Core.Record');
     });
   });
 
@@ -31,18 +31,8 @@ describe('Record', function () {
       Record.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      Record.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      Record.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      Record.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      Record.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -71,8 +61,8 @@ describe('Record', function () {
       Record.baseType.should.be.an.Object();
     });
 
-    it('should have id "Record"', function () {
-      Record.baseType.should.have.property('id', 'Record');
+    it('should have id "Core.Record"', function () {
+      Record.baseType.should.have.property('id', 'Core.Record');
     });
   });
 

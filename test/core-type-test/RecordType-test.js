@@ -6,23 +6,23 @@ describe('RecordType', function () {
     RecordType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(RecordType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(RecordType).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    RecordType.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    RecordType.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "RecordType"', function () {
-      RecordType.should.have.property('_id', 'RecordType');
+    it('should be "Core.RecordType"', function () {
+      RecordType.should.have.property('_id', 'Core.RecordType');
     });
   });
 
   describe('id', function () {
-    it('should be "RecordType"', function () {
-      RecordType.should.have.property('id', 'RecordType');
+    it('should be "Core.RecordType"', function () {
+      RecordType.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -31,18 +31,8 @@ describe('RecordType', function () {
       RecordType.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      RecordType.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      RecordType.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      RecordType.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      RecordType.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -71,8 +61,8 @@ describe('RecordType', function () {
       RecordType.baseType.should.be.an.Object();
     });
 
-    it('should have id "Trait"', function () {
-      RecordType.baseType.should.have.property('id', 'Trait');
+    it('should have id "Core.Trait"', function () {
+      RecordType.baseType.should.have.property('id', 'Core.Trait');
     });
   });
 

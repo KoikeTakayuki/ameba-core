@@ -25,8 +25,8 @@ describe('isRequiredField', function () {
       isRequiredField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', function () {
-      isRequiredField.type.should.have.property('id', 'Field');
+    it('should have id "Core.Field"', function () {
+      isRequiredField.type.should.have.property('id', 'Core.Field');
     });
   });
 
@@ -35,8 +35,8 @@ describe('isRequiredField', function () {
       isRequiredField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "BooleanType"', function () {
-      isRequiredField.fieldType.should.have.property('id', 'BooleanType');
+    it('should have id "Core.BooleanType"', function () {
+      isRequiredField.fieldType.should.have.property('id', 'Core.BooleanType');
     });
   });
 

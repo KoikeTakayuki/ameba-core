@@ -6,23 +6,23 @@ describe('Trait', function () {
     Trait.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(Trait).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(Trait).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    Trait.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    Trait.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "Trait"', function () {
-      Trait.should.have.property('_id', 'Trait');
+    it('should be "Core.Trait"', function () {
+      Trait.should.have.property('_id', 'Core.Trait');
     });
   });
 
   describe('id', function () {
-    it('should be "Trait"', function () {
-      Trait.should.have.property('id', 'Trait');
+    it('should be "Core.Trait"', function () {
+      Trait.should.have.property('id', 'Core.Trait');
     });
   });
 
@@ -31,18 +31,8 @@ describe('Trait', function () {
       Trait.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      Trait.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      Trait.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      Trait.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      Trait.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -51,8 +41,8 @@ describe('Trait', function () {
       Trait.fields.should.be.an.Array();
     });
 
-    it('should have 3 elements', function () {
-      Trait.fields.should.be.length(3);
+    it('should have 2 elements', function () {
+      Trait.fields.should.be.length(2);
     });
   });
 
@@ -71,8 +61,8 @@ describe('Trait', function () {
       Trait.baseType.should.be.an.Object();
     });
 
-    it('should have id "Record"', function () {
-      Trait.baseType.should.have.property('id', 'Record');
+    it('should have id "Core.Record"', function () {
+      Trait.baseType.should.have.property('id', 'Core.Record');
     });
   });
 

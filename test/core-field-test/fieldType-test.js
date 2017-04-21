@@ -25,8 +25,8 @@ describe('fieldTypeField', function () {
       fieldTypeField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', function () {
-      fieldTypeField.type.should.have.property('id', 'Field');
+    it('should have id "Core.Field"', function () {
+      fieldTypeField.type.should.have.property('id', 'Core.Field');
     });
   });
 
@@ -35,8 +35,8 @@ describe('fieldTypeField', function () {
       fieldTypeField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      fieldTypeField.fieldType.should.have.property('id', 'RecordType');
+    it('should have id "Core.RecordType"', function () {
+      fieldTypeField.fieldType.should.have.property('id', 'Core.RecordType');
     });
   });
 

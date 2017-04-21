@@ -6,23 +6,23 @@ describe('BooleanType', function () {
     BooleanType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(BooleanType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(BooleanType).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    BooleanType.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    BooleanType.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "BooleanType"', function () {
-      BooleanType.should.have.property('_id', 'BooleanType');
+    it('should be "Core.BooleanType"', function () {
+      BooleanType.should.have.property('_id', 'Core.BooleanType');
     });
   });
 
   describe('id', function () {
-    it('should be "BooleanType"', function () {
-      BooleanType.should.have.property('id', 'BooleanType');
+    it('should be "Core.BooleanType"', function () {
+      BooleanType.should.have.property('id', 'Core.BooleanType');
     });
   });
 
@@ -31,18 +31,8 @@ describe('BooleanType', function () {
       BooleanType.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      BooleanType.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      BooleanType.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      BooleanType.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      BooleanType.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -71,8 +61,8 @@ describe('BooleanType', function () {
       BooleanType.baseType.should.be.an.Object();
     });
 
-    it('should have id "Record"', function () {
-      BooleanType.baseType.should.have.property('id', 'Record');
+    it('should have id "Core.Record"', function () {
+      BooleanType.baseType.should.have.property('id', 'Core.Record');
     });
   });
 

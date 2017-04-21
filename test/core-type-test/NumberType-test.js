@@ -6,23 +6,23 @@ describe('NumberType', function () {
     NumberType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(NumberType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(NumberType).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    NumberType.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    NumberType.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "NumberType"', function () {
-      NumberType.should.have.property('_id', 'NumberType');
+    it('should be "Core.NumberType"', function () {
+      NumberType.should.have.property('_id', 'Core.NumberType');
     });
   });
 
   describe('id', function () {
-    it('should be "NumberType"', function () {
-      NumberType.should.have.property('id', 'NumberType');
+    it('should be "Core.NumberType"', function () {
+      NumberType.should.have.property('id', 'Core.NumberType');
     });
   });
 
@@ -31,18 +31,8 @@ describe('NumberType', function () {
       NumberType.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      NumberType.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      NumberType.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      NumberType.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      NumberType.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -71,8 +61,8 @@ describe('NumberType', function () {
       NumberType.baseType.should.be.an.Object();
     });
 
-    it('should have id "Record"', function () {
-      NumberType.baseType.should.have.property('id', 'Record');
+    it('should have id "Core.Record"', function () {
+      NumberType.baseType.should.have.property('id', 'Core.Record');
     });
   });
 

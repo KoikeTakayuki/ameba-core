@@ -6,23 +6,23 @@ describe('TextType', function () {
     TextType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(TextType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(TextType).should.have.length(8);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    TextType.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    TextType.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
-    it('should be "TextType"', function () {
-      TextType.should.have.property('_id', 'TextType');
+    it('should be "Core.TextType"', function () {
+      TextType.should.have.property('_id', 'Core.TextType');
     });
   });
 
   describe('id', function () {
-    it('should be "TextType"', function () {
-      TextType.should.have.property('id', 'TextType');
+    it('should be "Core.TextType"', function () {
+      TextType.should.have.property('id', 'Core.TextType');
     });
   });
 
@@ -31,18 +31,8 @@ describe('TextType', function () {
       TextType.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', function () {
-      TextType.type.should.have.property('id', 'RecordType');
-    });
-  });
-
-  describe('module', function () {
-    it('should be an Object', function () {
-      TextType.module.should.be.an.Object();
-    });
-
-    it('should have id "Core"', function () {
-      TextType.module.should.have.property('id', 'Core');
+    it('should have id "Core.RecordType"', function () {
+      TextType.type.should.have.property('id', 'Core.RecordType');
     });
   });
 
@@ -71,8 +61,8 @@ describe('TextType', function () {
       TextType.baseType.should.be.an.Object();
     });
 
-    it('should have id "Record"', function () {
-      TextType.baseType.should.have.property('id', 'Record');
+    it('should have id "Core.Record"', function () {
+      TextType.baseType.should.have.property('id', 'Core.Record');
     });
   });
 

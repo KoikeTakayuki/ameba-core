@@ -25,8 +25,8 @@ describe('isPrimitiveTypeField', function () {
       isPrimitiveTypeField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', function () {
-      isPrimitiveTypeField.type.should.have.property('id', 'Field');
+    it('should have id "Core.Field"', function () {
+      isPrimitiveTypeField.type.should.have.property('id', 'Core.Field');
     });
   });
 
@@ -35,8 +35,8 @@ describe('isPrimitiveTypeField', function () {
       isPrimitiveTypeField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "BooleanType"', function () {
-      isPrimitiveTypeField.fieldType.should.have.property('id', 'BooleanType');
+    it('should have id "Core.BooleanType"', function () {
+      isPrimitiveTypeField.fieldType.should.have.property('id', 'Core.BooleanType');
     });
   });
 

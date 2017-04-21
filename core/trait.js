@@ -1,8 +1,7 @@
 const Types = require('./types');
 
-function trait(module, id, fields, args) {
+function trait(id, fields, args) {
   return {
-    module,
     id,
     type: Types.Trait,
     fields,

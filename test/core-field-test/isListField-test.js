@@ -25,8 +25,8 @@ describe('isListFieldField', function () {
       isListFieldField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', function () {
-      isListFieldField.type.should.have.property('id', 'Field');
+    it('should have id "Core.Field"', function () {
+      isListFieldField.type.should.have.property('id', 'Core.Field');
     });
   });
 
@@ -35,8 +35,8 @@ describe('isListFieldField', function () {
       isListFieldField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "BooleanType"', function () {
-      isListFieldField.fieldType.should.have.property('id', 'BooleanType');
+    it('should have id "Core.BooleanType"', function () {
+      isListFieldField.fieldType.should.have.property('id', 'Core.BooleanType');
     });
   });
 

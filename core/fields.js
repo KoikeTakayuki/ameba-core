@@ -14,7 +14,6 @@ Fields.id = TextField('id', { isRequired: true });
 Fields.type = RecordField('type', Types.RecordType, { isRequired: true });
 
 // Trait Fields
-Fields.module = RecordField('module', Types.Module, { isRequired: true });
 Fields.fields = ListField('fields', Types.Field, { isRequired: true });
 Fields.traits = ListField('traits', Types.Trait, { defaultValue: [] });
 
@@ -28,6 +27,3 @@ Fields.fieldType = RecordField('fieldType', Types.RecordType, { isRequired: true
 Fields.isRequired = BooleanField('isRequired', { defaultValue: false });
 Fields.isListField = BooleanField('isListField', { defaultValue: false });
 Fields.defaultValue = RecordField('defaultValue', Types.Record);
-
-// Module Fields
-Fields.parentModule = RecordField('parentModule', Types.Module, { isRequired: true });
