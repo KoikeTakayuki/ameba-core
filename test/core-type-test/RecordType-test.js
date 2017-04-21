@@ -1,89 +1,89 @@
 const should = require('should');
 const RecordType = require('../../core/types').RecordType;
 
-describe('RecordType', () => {
-  it('should be an object', () => {
+describe('RecordType', function () {
+  it('should be an object', function () {
     RecordType.should.be.an.Object();
   });
 
-  it('should have 9 keys', () => {
+  it('should have 9 keys', function () {
     Object.keys(RecordType).should.have.length(9);
   });
 
-  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', () => {
+  it('should have keys: [_id, id, type, module, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
     RecordType.should.have.keys('_id', 'id', 'type', 'module', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
-  describe('_id', () => {
-    it('should be "RecordType"', () => {
+  describe('_id', function () {
+    it('should be "RecordType"', function () {
       RecordType.should.have.property('_id', 'RecordType');
     });
   });
 
-  describe('id', () => {
-    it('should be "RecordType"', () => {
+  describe('id', function () {
+    it('should be "RecordType"', function () {
       RecordType.should.have.property('id', 'RecordType');
     });
   });
 
-  describe('type', () => {
-    it('should be an Object', () => {
+  describe('type', function () {
+    it('should be an Object', function () {
       RecordType.type.should.be.an.Object();
     });
 
-    it('should have id "RecordType"', () => {
+    it('should have id "RecordType"', function () {
       RecordType.type.should.have.property('id', 'RecordType');
     });
   });
 
-  describe('module', () => {
-    it('should be an Object', () => {
+  describe('module', function () {
+    it('should be an Object', function () {
       RecordType.module.should.be.an.Object();
     });
 
-    it('should have id "Core"', () => {
+    it('should have id "Core"', function () {
       RecordType.module.should.have.property('id', 'Core');
     });
   });
 
-  describe('fields', () => {
-    it('should be an Array', () => {
+  describe('fields', function () {
+    it('should be an Array', function () {
       RecordType.fields.should.be.an.Array();
     });
 
-    it('should have 3 elements', () => {
+    it('should have 3 elements', function () {
       RecordType.fields.should.be.length(3);
     });
   });
 
-  describe('traits', () => {
-    it('should be an Array', () => {
+  describe('traits', function () {
+    it('should be an Array', function () {
       RecordType.traits.should.be.an.Array();
     });
 
-    it('should be empty', () => {
+    it('should be empty', function () {
       RecordType.traits.should.be.empty();
     });
   });
 
-  describe('baseType', () => {
-    it('should be an Object', () => {
+  describe('baseType', function () {
+    it('should be an Object', function () {
       RecordType.baseType.should.be.an.Object();
     });
 
-    it('should have id "Trait"', () => {
+    it('should have id "Trait"', function () {
       RecordType.baseType.should.have.property('id', 'Trait');
     });
   });
 
-  describe('isInnerType', () => {
-    it('should be false', () => {
+  describe('isInnerType', function () {
+    it('should be false', function () {
       RecordType.isInnerType.should.be.false();
     });
   });
 
-  describe('isPrimitiveType', () => {
-    it('should be false', () => {
+  describe('isPrimitiveType', function () {
+    it('should be false', function () {
       RecordType.isPrimitiveType.should.be.false();
     });
   });

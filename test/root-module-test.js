@@ -1,43 +1,43 @@
 const should = require('should');
 const rootModule = require('../core/root-module');
 
-describe('rootModule', () => {
-  it('should be an Object', () => {
+describe('rootModule', function () {
+  it('should be an Object', function () {
     rootModule.should.be.an.Object();
   });
 
-  it('should have 4 keys', () => {
+  it('should have 4 keys', function () {
     Object.keys(rootModule).should.have.length(4);
   });
 
-  it('should have keys: [_id, id, type, parentModule]', () => {
+  it('should have keys: [_id, id, type, parentModule]', function () {
     rootModule.should.have.keys('_id', 'id', 'type', 'parentModule');
   });
 
-  describe('_id', () => {
-    it('should be "Root"', () => {
+  describe('_id', function () {
+    it('should be "Root"', function () {
       rootModule.should.have.property('_id', 'Root');
     });
   });
 
-  describe('id', () => {
-    it('should be "Root"', () => {
+  describe('id', function () {
+    it('should be "Root"', function () {
       rootModule.should.have.property('id', 'Root');
     });
   });
 
-  describe('type', () => {
-    it('should be an Object', () => {
+  describe('type', function () {
+    it('should be an Object', function () {
       rootModule.type.should.be.an.Object();
     });
 
-    it('should have id "Module"', () => {
+    it('should have id "Module"', function () {
       rootModule.type.should.have.property('id', 'Module');
     });
   });
 
-  describe('parentModule', () => {
-    it('should be null', () => {
+  describe('parentModule', function () {
+    it('should be null', function () {
       should.equal(rootModule.parentModule, null);
     });
   });

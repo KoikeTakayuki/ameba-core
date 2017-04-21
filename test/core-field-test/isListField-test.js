@@ -1,59 +1,59 @@
 const should = require('should');
 const isListFieldField = require('../../core/fields').isListField;
 
-describe('isListFieldField', () => {
-  it('should be an object', () => {
+describe('isListFieldField', function () {
+  it('should be an object', function () {
     isListFieldField.should.be.an.Object();
   });
 
-  it('should have 6 keys', () => {
+  it('should have 6 keys', function () {
     Object.keys(isListFieldField).should.have.length(6);
   });
 
-  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
     isListFieldField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
   });
 
-  describe('id', () => {
-    it('should be "isListField"', () => {
+  describe('id', function () {
+    it('should be "isListField"', function () {
       isListFieldField.should.have.property('id', 'isListField');
     });
   });
 
-  describe('type', () => {
-    it('should be an Object', () => {
+  describe('type', function () {
+    it('should be an Object', function () {
       isListFieldField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', () => {
+    it('should have id "Field"', function () {
       isListFieldField.type.should.have.property('id', 'Field');
     });
   });
 
-  describe('fieldType', () => {
-    it('should be an Object', () => {
+  describe('fieldType', function () {
+    it('should be an Object', function () {
       isListFieldField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "BooleanType"', () => {
+    it('should have id "BooleanType"', function () {
       isListFieldField.fieldType.should.have.property('id', 'BooleanType');
     });
   });
 
-  describe('isRequired', () => {
-    it('should be false', () => {
+  describe('isRequired', function () {
+    it('should be false', function () {
       isListFieldField.isRequired.should.be.false();
     });
   });
 
-  describe('isListField', () => {
-    it('should be false', () => {
+  describe('isListField', function () {
+    it('should be false', function () {
       isListFieldField.isListField.should.be.false();
     });
   });
 
-  describe('defaultValue', () => {
-    it('should be false', () => {
+  describe('defaultValue', function () {
+    it('should be false', function () {
       isListFieldField.defaultValue.should.be.false();
     });
   });

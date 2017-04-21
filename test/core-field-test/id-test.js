@@ -1,59 +1,59 @@
 const should = require('should');
 const idField = require('../../core/fields').id;
 
-describe('idField', () => {
-  it('should be an object', () => {
+describe('idField', function () {
+  it('should be an object', function () {
     idField.should.be.an.Object();
   });
 
-  it('should have 6 keys', () => {
+  it('should have 6 keys', function () {
     Object.keys(idField).should.have.length(6);
   });
 
-  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', () => {
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
     idField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
   });
 
-  describe('id', () => {
-    it('should be "id"', () => {
+  describe('id', function () {
+    it('should be "id"', function () {
       idField.should.have.property('id', 'id');
     });
   });
 
-  describe('type', () => {
-    it('should be an Object', () => {
+  describe('type', function () {
+    it('should be an Object', function () {
       idField.type.should.be.an.Object();
     });
 
-    it('should have id "Field"', () => {
+    it('should have id "Field"', function () {
       idField.type.should.have.property('id', 'Field');
     });
   });
 
-  describe('fieldType', () => {
-    it('should be an Object', () => {
+  describe('fieldType', function () {
+    it('should be an Object', function () {
       idField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "TextType"', () => {
+    it('should have id "TextType"', function () {
       idField.fieldType.should.have.property('id', 'TextType');
     });
   });
 
-  describe('isRequired', () => {
-    it('should be true', () => {
+  describe('isRequired', function () {
+    it('should be true', function () {
       idField.isRequired.should.be.true();
     });
   });
 
-  describe('isListField', () => {
-    it('should be false', () => {
+  describe('isListField', function () {
+    it('should be false', function () {
       idField.isListField.should.be.false();
     });
   });
 
-  describe('defaultValue', () => {
-    it('should be undefined', () => {
+  describe('defaultValue', function () {
+    it('should be undefined', function () {
       should.equal(idField.defaultValue, undefined);
     });
   });
