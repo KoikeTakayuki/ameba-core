@@ -7,6 +7,7 @@ const ListField = require('./core/list-field');
 const NumberField = require('./core/number-field');
 const BooleanField = require('./core/boolean-field');
 const TextField = require('./core/text-field');
+const FunctionField = require('./core/function-field');
 
 module.exports = {
   Types,
@@ -18,4 +19,5 @@ module.exports = {
   NumberField,
   BooleanField,
   TextField,
+  FunctionField,
 };
