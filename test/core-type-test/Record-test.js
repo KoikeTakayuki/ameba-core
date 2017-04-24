@@ -41,8 +41,8 @@ describe('Record', function () {
       Record.fields.should.be.an.Array();
     });
 
-    it('should have 2 elements', function () {
-      Record.fields.should.be.length(2);
+    it('should have 1 elements', function () {
+      Record.fields.should.be.length(1);
     });
   });
 

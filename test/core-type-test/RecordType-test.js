@@ -41,8 +41,8 @@ describe('RecordType', function () {
       RecordType.fields.should.be.an.Array();
     });
 
-    it('should have 3 elements', function () {
-      RecordType.fields.should.be.length(3);
+    it('should have 4 elements', function () {
+      RecordType.fields.should.be.length(4);
     });
   });
 
