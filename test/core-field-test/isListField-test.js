@@ -1,5 +1,5 @@
 const should = require('should');
-const isListFieldField = require('../../core/fields').isListField;
+const isListFieldField = require('../../index').Fields.isListField;
 
 describe('isListFieldField', function () {
   it('should be an object', function () {

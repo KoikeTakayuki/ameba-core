@@ -1,5 +1,5 @@
 const should = require('should');
-const FunctionType = require('../../core/types').FunctionType;
+const FunctionType = require('../../index').Types.FunctionType;
 
 describe('FunctionType', function () {
   it('should be an object', function () {

@@ -1,5 +1,5 @@
 const should = require('should');
-const BinaryType = require('../../core/types').BinaryType;
+const BinaryType = require('../../index').Types.BinaryType;
 
 describe('BinaryType', function () {
   it('should be an object', function () {

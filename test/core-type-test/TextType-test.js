@@ -1,5 +1,5 @@
 const should = require('should');
-const TextType = require('../../core/types').TextType;
+const TextType = require('../../index').Types.TextType;
 
 describe('TextType', function () {
   it('should be an object', function () {

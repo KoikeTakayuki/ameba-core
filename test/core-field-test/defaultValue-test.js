@@ -1,5 +1,5 @@
 const should = require('should');
-const defaultValueField = require('../../core/fields').defaultValue;
+const defaultValueField = require('../../index').Fields.defaultValue;
 
 describe('defaultValueField', function () {
   it('should be an object', function () {

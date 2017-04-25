@@ -1,5 +1,5 @@
 const should = require('should');
-const isInnerTypeField = require('../../core/fields').isInnerType;
+const isInnerTypeField = require('../../index').Fields.isInnerType;
 
 describe('isInnerTypeField', function () {
   it('should be an object', function () {

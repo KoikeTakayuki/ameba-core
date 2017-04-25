@@ -1,5 +1,5 @@
 const should = require('should');
-const idField = require('../../core/fields').id;
+const idField = require('../../index').Fields.id;
 
 describe('idField', function () {
   it('should be an object', function () {

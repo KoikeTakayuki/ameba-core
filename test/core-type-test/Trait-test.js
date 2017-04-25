@@ -1,5 +1,5 @@
 const should = require('should');
-const Trait = require('../../core/types').Trait;
+const Trait = require('../../index').Types.Trait;
 
 describe('Trait', function () {
   it('should be an object', function () {

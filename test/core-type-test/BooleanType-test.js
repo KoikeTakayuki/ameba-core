@@ -1,5 +1,5 @@
 const should = require('should');
-const BooleanType = require('../../core/types').BooleanType;
+const BooleanType = require('../../index').Types.BooleanType;
 
 describe('BooleanType', function () {
   it('should be an object', function () {

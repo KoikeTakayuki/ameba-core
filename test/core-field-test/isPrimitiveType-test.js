@@ -1,5 +1,5 @@
 const should = require('should');
-const isPrimitiveTypeField = require('../../core/fields').isPrimitiveType;
+const isPrimitiveTypeField = require('../../index').Fields.isPrimitiveType;
 
 describe('isPrimitiveTypeField', function () {
   it('should be an object', function () {

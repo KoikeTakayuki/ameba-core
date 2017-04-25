@@ -1,5 +1,5 @@
 const should = require('should');
-const typeField = require('../../core/fields').type;
+const typeField = require('../../index').Fields.type;
 
 describe('typeField', function () {
   it('should be an object', function () {

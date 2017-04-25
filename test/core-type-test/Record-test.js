@@ -1,5 +1,5 @@
 const should = require('should');
-const Record = require('../../core/types').Record;
+const Record = require('../../index').Types.Record;
 
 describe('Record', function () {
   it('should be an object', function () {

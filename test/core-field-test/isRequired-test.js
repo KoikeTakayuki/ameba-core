@@ -1,5 +1,5 @@
 const should = require('should');
-const isRequiredField = require('../../core/fields').isRequired;
+const isRequiredField = require('../../index').Fields.isRequired;
 
 describe('isRequiredField', function () {
   it('should be an object', function () {

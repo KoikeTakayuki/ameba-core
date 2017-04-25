@@ -1,5 +1,5 @@
 const should = require('should');
-const NumberType = require('../../core/types').NumberType;
+const NumberType = require('../../index').Types.NumberType;
 
 describe('NumberType', function () {
   it('should be an object', function () {
