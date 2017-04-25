@@ -6,6 +6,7 @@ const TextType = {};
 const NumberType = {};
 const BooleanType = {};
 const FunctionType = {};
+const BinaryType = {};
 
 module.exports = {
   Record,
@@ -16,6 +17,7 @@ module.exports = {
   NumberType,
   BooleanType,
   FunctionType,
+  BinaryType,
 };
 
 TextType._id = 'Core.TextType';
@@ -31,8 +33,8 @@ NumberType._id = 'Core.NumberType';
 NumberType.id = NumberType._id;
 NumberType.type = RecordType;
 NumberType.fields = [];
-NumberType.traits = [];
 NumberType.baseType = Record;
+NumberType.traits = [];
 NumberType.isPrimitiveType = true;
 NumberType.isInnerType = true;
 
@@ -40,8 +42,8 @@ BooleanType._id = 'Core.BooleanType';
 BooleanType.id = BooleanType._id;
 BooleanType.type = RecordType;
 BooleanType.fields = [];
-BooleanType.traits = [];
 BooleanType.baseType = Record;
+BooleanType.traits = [];
 BooleanType.isPrimitiveType = true;
 BooleanType.isInnerType = true;
 
@@ -49,10 +51,20 @@ FunctionType._id = 'Core.FunctionType';
 FunctionType.id = FunctionType._id;
 FunctionType.type = RecordType;
 FunctionType.fields = [];
-FunctionType.traits = [];
 FunctionType.baseType = Record;
+FunctionType.traits = [];
 FunctionType.isPrimitiveType = true;
 FunctionType.isInnerType = true;
+
+BinaryType._id = 'Core.BinaryType';
+BinaryType.id = BinaryType._id;
+BinaryType.type = RecordType;
+BinaryType.fields = [];
+BinaryType.baseType = Record;
+BinaryType.traits = [];
+BinaryType.isPrimitiveType = true;
+BinaryType.isInnerType = true;
+
 
 // Types Fields
 const Fields = require('./fields');
