@@ -6,7 +6,7 @@ function binaryField(id, args) {
   const isListField = false;
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
 
-  return field(id, Types.BinaryField, isRequired, isListField, defaultValue);
+  return field(id, Types.BinaryType, isRequired, isListField, defaultValue);
 }
 
 module.exports = binaryField;
