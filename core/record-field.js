@@ -1,11 +1,11 @@
-const Field = require('./field');
+const field = require('./field');
 
-function RecordField(id, fieldType, args) {
+function recordField(id, fieldType, args) {
   const isRequired = !!(args && args.isRequired === true);
   const isListField = false;
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
 
-  return Field(id, fieldType, isRequired, isListField, defaultValue);
+  return field(id, fieldType, isRequired, isListField, defaultValue);
 }
 
-module.exports = RecordField;
+module.exports = recordField;

@@ -1,6 +1,6 @@
 const Types = require('./types');
 
-function Field(id, fieldType, isRequired, isListField, defaultValue) {
+function field(id, fieldType, isRequired, isListField, defaultValue) {
   return {
     id,
     type: Types.Field,
@@ -11,4 +11,4 @@ function Field(id, fieldType, isRequired, isListField, defaultValue) {
   };
 }
 
-module.exports = Field;
+module.exports = field;
