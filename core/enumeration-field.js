@@ -7,6 +7,10 @@ function enumerationField(id, values, args) {
   const defaultValue = args && args.defaultValue;
   const validator = v => values.indexOf(v) > -1;
 
+  if (defaultValue && !validator(defaultValue)) {
+    throw new Error('invalid defaultValue given');
+  }
+
   return field(id, Types.TextType, isRequired, isListField, defaultValue, validator);
 }
 
