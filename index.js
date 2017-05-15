@@ -9,6 +9,7 @@ const booleanField = require('./core/boolean-field');
 const textField = require('./core/text-field');
 const functionField = require('./core/function-field');
 const binaryField = require('./core/binary-field');
+const enumerationField = require('./core/enumeration-field');
 
 module.exports = {
   Types,
@@ -22,4 +23,5 @@ module.exports = {
   textField,
   functionField,
   binaryField,
+  enumerationField,
 };
