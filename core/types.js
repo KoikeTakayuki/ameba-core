@@ -99,8 +99,8 @@ RecordType.isPrimitiveType = false;
 Field._id = 'Core.Field';
 Field.id = Field._id;
 Field.type = RecordType;
-Field.fields = [Fields.id, Fields.fieldType,
-  Fields.isRequired, Fields.isListField, Fields.defaultValue];
+Field.fields = [Fields.id, Fields.fieldType, Fields.isRequired,
+  Fields.isListField, Fields.defaultValue, Fields.validator];
 Field.baseType = Record;
 Field.traits = [];
 Field.isInnerType = true;
