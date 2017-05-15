@@ -6,12 +6,12 @@ describe('textField', function () {
     textField('test').should.be.an.Object();
   });
 
-  it('should return an object which has 6 keys', function () {
-    Object.keys(textField('test')).should.have.length(6);
+  it('should return an object which has 7 keys', function () {
+    Object.keys(textField('test')).should.have.length(7);
   });
 
-  it('should return an object which has keys: [id, type, fieldType, isRequired, isListType, defautValue]', function () {
-    Object.keys(textField('test')).should.have.length(6);
+  it('should return an object which has keys: [id, type, fieldType, isRequired, isListField, defautValue, validator]', function () {
+    textField('test').should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
   });
 
   it('should return an object whose id is "test"', function () {

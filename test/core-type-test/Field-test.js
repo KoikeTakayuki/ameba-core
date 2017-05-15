@@ -41,8 +41,8 @@ describe('Field', function () {
       Field.fields.should.be.an.Array();
     });
 
-    it('should have 5 elements', function () {
-      Field.fields.should.be.length(5);
+    it('should have 6 elements', function () {
+      Field.fields.should.be.length(6);
     });
   });
 

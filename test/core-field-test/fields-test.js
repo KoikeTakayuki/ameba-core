@@ -6,12 +6,12 @@ describe('fieldsField', function () {
     fieldsField.should.be.an.Object();
   });
 
-  it('should have 6 keys', function () {
-    Object.keys(fieldsField).should.have.length(6);
+  it('should have 7 keys', function () {
+    Object.keys(fieldsField).should.have.length(7);
   });
 
-  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue]', function () {
-    fieldsField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue');
+  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue, validator]', function () {
+    fieldsField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
   });
 
   describe('id', function () {

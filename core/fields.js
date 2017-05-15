@@ -26,6 +26,6 @@ Fields.isPrimitiveType = booleanField('isPrimitiveType', { defaultValue: false }
 // Field Fields
 Fields.fieldType = recordField('fieldType', Types.RecordType, { isRequired: true });
 Fields.isRequired = booleanField('isRequired', { defaultValue: false });
-Fields.islistField = booleanField('islistField', { defaultValue: false });
+Fields.isListField = booleanField('isListField', { defaultValue: false });
 Fields.defaultValue = recordField('defaultValue', Types.Record);
 Fields.validator = functionField('validator', Types.FunctionType);
