@@ -6,6 +6,7 @@ const recordField = require('./core/record-field');
 const listField = require('./core/list-field');
 const numberField = require('./core/number-field');
 const booleanField = require('./core/boolean-field');
+const dateField = require('./core/date-field');
 const textField = require('./core/text-field');
 const functionField = require('./core/function-field');
 const binaryField = require('./core/binary-field');
