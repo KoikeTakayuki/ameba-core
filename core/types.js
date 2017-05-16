@@ -5,6 +5,7 @@ const Field = {};
 const TextType = {};
 const NumberType = {};
 const BooleanType = {};
+const DateType = {};
 const FunctionType = {};
 const BinaryType = {};
 
@@ -16,6 +17,7 @@ module.exports = {
   TextType,
   NumberType,
   BooleanType,
+  DateType,
   FunctionType,
   BinaryType,
 };
@@ -46,6 +48,15 @@ BooleanType.baseType = Record;
 BooleanType.traits = [];
 BooleanType.isPrimitiveType = true;
 BooleanType.isInnerType = true;
+
+DateType._id = 'Core.DateType';
+DateType.id = DateType._id;
+DateType.type = RecordType;
+DateType.fields = [];
+DateType.baseType = Record;
+DateType.traits = [];
+DateType.isPrimitiveType = true;
+DateType.isInnerType = true;
 
 FunctionType._id = 'Core.FunctionType';
 FunctionType.id = FunctionType._id;
