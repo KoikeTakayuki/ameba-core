@@ -21,6 +21,7 @@ module.exports = {
   listField,
   numberField,
   booleanField,
+  dateField,
   textField,
   functionField,
   binaryField,
