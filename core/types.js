@@ -8,6 +8,7 @@ const BooleanType = {};
 const DateType = {};
 const FunctionType = {};
 const BinaryType = {};
+const EnumerationType = {};
 
 module.exports = {
   Record,
@@ -20,6 +21,7 @@ module.exports = {
   DateType,
   FunctionType,
   BinaryType,
+  EnumerationType,
 };
 
 TextType._id = 'Core.TextType';
@@ -116,3 +118,12 @@ Field.baseType = Record;
 Field.traits = [];
 Field.isInnerType = true;
 Field.isPrimitiveType = false;
+
+EnumerationType._id = 'Core.EnumerationType';
+EnumerationType.id = EnumerationType._id;
+EnumerationType.type = RecordType;
+EnumerationType.fields = [Fields.valuesField];
+EnumerationType.baseType = RecordType;
+EnumerationType.traits = [];
+EnumerationType.isInnerType = true;
+EnumerationType.isPrimitiveType = true;

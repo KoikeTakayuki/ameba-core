@@ -1,11 +1,10 @@
 const Types = require('./types');
 
-function trait(id, fields, args) {
+function trait(id, fields) {
   return {
     id,
     type: Types.Trait,
     fields,
-    traits: (args && args.traits) ? args.traits : [],
   };
 }
 

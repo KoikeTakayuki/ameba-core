@@ -5,6 +5,7 @@ function recordType(id, fields, args) {
   const result = trait(id, fields, args);
   result.type = Types.RecordType;
   result.baseType = args && args.baseType ? args.baseType : Types.Record;
+  result.traits = (args && args.traits) ? args.traits : [];
   result.isInnerType = !!(args && args.isInnerType === true);
   result.isPrimitiveType = !!(args && args.isPrimitiveType === true);
 

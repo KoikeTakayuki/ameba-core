@@ -29,3 +29,6 @@ Fields.isRequired = booleanField('isRequired', { defaultValue: false });
 Fields.isListField = booleanField('isListField', { defaultValue: false });
 Fields.defaultValue = recordField('defaultValue', Types.Record);
 Fields.validator = functionField('validator', Types.FunctionType);
+
+// EnumerationType Fields
+Fields.valuesField = listField('values', Types.TextType);
