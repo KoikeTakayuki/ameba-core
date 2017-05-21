@@ -11,25 +11,25 @@ const booleanField = require('./boolean-field');
 const functionField = require('./function-field');
 
 // Record Field
-Fields.id = textField('id', { isRequired: true });
-Fields.type = recordField('type', Types.RecordType, { isRequired: true });
+Fields.id = textField('id', 'ID', { isRequired: true });
+Fields.type = recordField('type', 'タイプ', Types.RecordType, { isRequired: true });
 
 // Trait Fields
 Fields.name = textField('name');
-Fields.fields = listField('fields', Types.Field, { isRequired: true });
+Fields.fields = listField('fields', 'フィールド', Types.Field, { isRequired: true });
 
 // RecordType Fields
-Fields.baseType = recordField('baseType', Types.RecordType, { defaultValue: Types.Record });
-Fields.traits = listField('traits', Types.Trait, { defaultValue: [] });
-Fields.isInnerType = booleanField('isInnerType', { defaultValue: false });
-Fields.isPrimitiveType = booleanField('isPrimitiveType', { defaultValue: false });
+Fields.baseType = recordField('baseType', 'ベースタイプ', Types.RecordType, { defaultValue: Types.Record });
+Fields.traits = listField('traits', 'トレイト', Types.Trait, { defaultValue: [] });
+Fields.isInnerType = booleanField('isInnerType', '内部レコード', { defaultValue: false });
+Fields.isPrimitiveType = booleanField('isPrimitiveType', '基本レコード', { defaultValue: false });
 
 // Field Fields
-Fields.fieldType = recordField('fieldType', Types.RecordType, { isRequired: true });
-Fields.isRequired = booleanField('isRequired', { defaultValue: false });
-Fields.isListField = booleanField('isListField', { defaultValue: false });
-Fields.defaultValue = recordField('defaultValue', Types.Record);
-Fields.validator = functionField('validator', Types.FunctionType);
+Fields.fieldType = recordField('fieldType', 'フィールドタイプ', Types.RecordType, { isRequired: true });
+Fields.isRequired = booleanField('isRequired', '必須フィールド', { defaultValue: false });
+Fields.isListField = booleanField('isListField', 'リストフィールド', { defaultValue: false });
+Fields.defaultValue = recordField('defaultValue', 'デフォルト値', Types.Record);
+Fields.validator = functionField('validator', 'バリデーター', Types.FunctionType);
 
 // EnumerationType Fields
-Fields.valuesField = listField('values', Types.TextType);
+Fields.valuesField = listField('values', '値', Types.TextType);

@@ -122,7 +122,7 @@ Field._id = 'Core.Field';
 Field.type = RecordType;
 Field.id = Field._id;
 Field.name = Field._id;
-Field.fields = [Fields.id, Fields.fieldType, Fields.isRequired,
+Field.fields = [Fields.id, Fields.name, Fields.fieldType, Fields.isRequired,
   Fields.isListField, Fields.defaultValue, Fields.validator];
 Field.baseType = Record;
 Field.traits = [];

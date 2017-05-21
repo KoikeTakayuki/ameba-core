@@ -6,12 +6,12 @@ describe('isPrimitiveTypeField', function () {
     isPrimitiveTypeField.should.be.an.Object();
   });
 
-  it('should have 7 keys', function () {
-    Object.keys(isPrimitiveTypeField).should.have.length(7);
+  it('should have 8 keys', function () {
+    Object.keys(isPrimitiveTypeField).should.have.length(8);
   });
 
-  it('should have keys: [id, type, fieldType, isRequired, isListField, defaultValue, validator]', function () {
-    isPrimitiveTypeField.should.have.keys('id', 'type', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
+  it('should have keys: [type, id, fieldType, isRequired, isListField, defaultValue, validator]', function () {
+    isPrimitiveTypeField.should.have.keys('type', 'id', 'name', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
   });
 
   describe('id', function () {
