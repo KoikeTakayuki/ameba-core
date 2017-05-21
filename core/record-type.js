@@ -1,8 +1,8 @@
 const Types = require('./types');
 const trait = require('./trait');
 
-function recordType(id, fields, args) {
-  const result = trait(id, fields, args);
+function recordType(id, name, fields, args) {
+  const result = trait(id, name, fields, args);
   result.type = Types.RecordType;
   result.baseType = args && args.baseType ? args.baseType : Types.Record;
   result.traits = (args && args.traits) ? args.traits : [];
