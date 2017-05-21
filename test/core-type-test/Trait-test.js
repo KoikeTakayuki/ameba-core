@@ -6,12 +6,12 @@ describe('Trait', function () {
     Trait.should.be.an.Object();
   });
 
-  it('should have 8 keys', function () {
-    Object.keys(Trait).should.have.length(8);
+  it('should have 9 keys', function () {
+    Object.keys(Trait).should.have.length(9);
   });
 
-  it('should have keys: [_id, id, type, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    Trait.should.have.keys('_id', 'id', 'type', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
+  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    Trait.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('_id', function () {
@@ -41,8 +41,8 @@ describe('Trait', function () {
       Trait.fields.should.be.an.Array();
     });
 
-    it('should have 2 elements', function () {
-      Trait.fields.should.be.length(2);
+    it('should have 3 elements', function () {
+      Trait.fields.should.be.length(3);
     });
   });
 

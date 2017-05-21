@@ -15,11 +15,12 @@ Fields.id = textField('id', { isRequired: true });
 Fields.type = recordField('type', Types.RecordType, { isRequired: true });
 
 // Trait Fields
+Fields.name = textField('name');
 Fields.fields = listField('fields', Types.Field, { isRequired: true });
-Fields.traits = listField('traits', Types.Trait, { defaultValue: [] });
 
 // RecordType Fields
 Fields.baseType = recordField('baseType', Types.RecordType, { defaultValue: Types.Record });
+Fields.traits = listField('traits', Types.Trait, { defaultValue: [] });
 Fields.isInnerType = booleanField('isInnerType', { defaultValue: false });
 Fields.isPrimitiveType = booleanField('isPrimitiveType', { defaultValue: false });
 
