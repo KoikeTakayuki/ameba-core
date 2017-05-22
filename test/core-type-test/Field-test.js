@@ -6,18 +6,12 @@ describe('Field', function () {
     Field.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(Field).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(Field).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    Field.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.Field"', function () {
-      Field.should.have.property('_id', 'Core.Field');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    Field.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {

@@ -6,18 +6,12 @@ describe('BooleanType', function () {
     BooleanType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(BooleanType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(BooleanType).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    BooleanType.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.BooleanType"', function () {
-      BooleanType.should.have.property('_id', 'Core.BooleanType');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    BooleanType.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {

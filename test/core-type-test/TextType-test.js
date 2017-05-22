@@ -6,18 +6,12 @@ describe('TextType', function () {
     TextType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(TextType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(TextType).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    TextType.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.TextType"', function () {
-      TextType.should.have.property('_id', 'Core.TextType');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    TextType.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {

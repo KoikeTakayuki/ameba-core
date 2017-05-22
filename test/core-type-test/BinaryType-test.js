@@ -6,18 +6,12 @@ describe('BinaryType', function () {
     BinaryType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(BinaryType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(BinaryType).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    BinaryType.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.BinaryType"', function () {
-      BinaryType.should.have.property('_id', 'Core.BinaryType');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    BinaryType.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {

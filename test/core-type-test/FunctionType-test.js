@@ -6,18 +6,12 @@ describe('FunctionType', function () {
     FunctionType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(FunctionType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(FunctionType).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    FunctionType.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.FunctionType"', function () {
-      FunctionType.should.have.property('_id', 'Core.FunctionType');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    FunctionType.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {

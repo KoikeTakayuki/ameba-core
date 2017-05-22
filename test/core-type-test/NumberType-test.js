@@ -6,18 +6,12 @@ describe('NumberType', function () {
     NumberType.should.be.an.Object();
   });
 
-  it('should have 9 keys', function () {
-    Object.keys(NumberType).should.have.length(9);
+  it('should have 8 keys', function () {
+    Object.keys(NumberType).should.have.length(8);
   });
 
-  it('should have keys: [_id, type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
-    NumberType.should.have.keys('_id', 'type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
-  });
-
-  describe('_id', function () {
-    it('should be "Core.NumberType"', function () {
-      NumberType.should.have.property('_id', 'Core.NumberType');
-    });
+  it('should have keys: [type, id, name, fields, traits, baseType, isInnerType, isPrimitiveType]', function () {
+    NumberType.should.have.keys('type', 'id', 'name', 'fields', 'traits', 'baseType', 'isInnerType', 'isPrimitiveType');
   });
 
   describe('id', function () {
