@@ -35,8 +35,8 @@ describe('defaultValueField', function () {
       defaultValueField.fieldType.should.be.an.Object();
     });
 
-    it('should have id "Core.Record"', function () {
-      defaultValueField.fieldType.should.have.property('id', 'Core.Record');
+    it('should have id "Core.FunctionType"', function () {
+      defaultValueField.fieldType.should.have.property('id', 'Core.FunctionType');
     });
   });
 
