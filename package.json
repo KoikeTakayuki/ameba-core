@@ -1,6 +1,6 @@
 {
   "name": "ameba-core",
-  "version": "0.9.10",
+  "version": "0.9.11",
   "description": "ameba core code",
   "main": "index.js",
   "scripts": {
