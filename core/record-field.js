@@ -5,8 +5,10 @@ function recordField(id, name, fieldType, args) {
   const isListField = false;
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
   const validator = args && args.validator;
+  const isUnique = args && args.isUnique;
 
-  return field(id, name, fieldType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, fieldType, isRequired, isListField,
+    isUnique, false, defaultValue, validator);
 }
 
 module.exports = recordField;

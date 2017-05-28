@@ -6,12 +6,12 @@ describe('booleanField', function () {
     booleanField('test', 'name').should.be.an.Object();
   });
 
-  it('should return an object which has 8 keys', function () {
-    Object.keys(booleanField('test', 'name')).should.have.length(8);
+  it('should return an object which has 10 keys', function () {
+    Object.keys(booleanField('test', 'name')).should.have.length(10);
   });
 
-  it('should return an object which has keys: [type, id, name, fieldType, isRequired, isListType, defautValue]', function () {
-    booleanField('test', 'name').should.have.keys('type', 'id', 'name', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
+  it('should return an object which has keys: [type, id, name, fieldType, isRequired, isListType, isUnique, autoIncrement, defautValue]', function () {
+    booleanField('test', 'name').should.have.keys('type', 'id', 'name', 'fieldType', 'isRequired', 'isListField', 'isUnique', 'autoIncrement', 'defaultValue', 'validator');
   });
 
   it('should return an object whose id is "test"', function () {

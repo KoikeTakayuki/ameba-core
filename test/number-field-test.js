@@ -6,12 +6,12 @@ describe('numberField', function () {
     numberField('test', 'name').should.be.an.Object();
   });
 
-  it('should return an object which has 8 keys', function () {
-    Object.keys(numberField('test', 'name')).should.have.length(8);
+  it('should return an object which has 10 keys', function () {
+    Object.keys(numberField('test', 'name')).should.have.length(10);
   });
 
-  it('should return an object which has keys: [type, id, name, fieldType, isRequired, isListField, defautValue, validator]', function () {
-    numberField('test', 'name').should.have.keys('type', 'id', 'name', 'fieldType', 'isRequired', 'isListField', 'defaultValue', 'validator');
+  it('should return an object which has keys: [type, id, name, fieldType, isRequired, isListField, isUnique, autoIncrement, defautValue, validator]', function () {
+    numberField('test', 'name').should.have.keys('type', 'id', 'name', 'fieldType', 'isRequired', 'isListField', 'isUnique', 'autoIncrement', 'defaultValue', 'validator');
   });
 
   it('should return an object whose id is "test"', function () {
@@ -48,6 +48,22 @@ describe('numberField', function () {
 
   it('should return an object whose isListField is false even if specified', function () {
     numberField('test', 'name', { isListField: true }).isListField.should.false();
+  });
+
+  it('should return an object whose isUnique is false if not specified', function () {
+    numberField('test', 'name').isUnique.should.false();
+  });
+
+  it('should return an object whose isUnique is true if specified', function () {
+    numberField('test', 'name', { isUnique: true }).isUnique.should.false();
+  });
+
+  it('should return an object whose autoIncrement is false if not specified', function () {
+    numberField('test', 'name').autoIncrement.should.false();
+  });
+
+  it('should return an object whose autoIncrement is true if specified', function () {
+    numberField('test', 'name', { autoIncrement: true }).autoIncrement.should.false();
   });
 
   it('should return an object whose defaultValue is undefined if not specified', function () {

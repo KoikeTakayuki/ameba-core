@@ -7,7 +7,8 @@ function richTextField(id, name, args) {
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
   const validator = args && args.validator;
 
-  return field(id, name, Types.RichTextType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.RichTextType, isRequired, isListField,
+    false, false, defaultValue, validator);
 }
 
 module.exports = richTextField;

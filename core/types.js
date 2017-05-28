@@ -168,7 +168,7 @@ Field.type = RecordType;
 Field.id = 'Core.Field';
 Field.name = Field.id;
 Field.fields = [Fields.id, Fields.name, Fields.fieldType, Fields.isRequired,
-  Fields.isListField, Fields.defaultValue, Fields.validator];
+  Fields.isListField, Fields.isUnique, Fields.autoIncrement, Fields.defaultValue, Fields.validator];
 Field.baseType = Record;
 Field.traits = [];
 Field.isInnerType = true;

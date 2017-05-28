@@ -7,8 +7,11 @@ function intField(id, name, args) {
   const defaultValue = args && (args.defaultValue !== null || args.defaultValue !== undefined) ?
     args.defaultValue : undefined;
   const validator = args && args.validator;
+  const isUnique = args && args.isUnique;
+  const autoIncrement = args && args.autoIncrement;
 
-  return field(id, name, Types.IntType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.IntType, isRequired, isListField,
+    isUnique, autoIncrement, defaultValue, validator);
 }
 
 module.exports = intField;

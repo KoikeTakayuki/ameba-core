@@ -7,7 +7,8 @@ function booleanField(id, name, args) {
   const defaultValue = args && args.defaultValue;
   const validator = args && args.validator;
 
-  return field(id, name, Types.BooleanType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.BooleanType, isRequired, isListField,
+    false, false, defaultValue, validator);
 }
 
 module.exports = booleanField;

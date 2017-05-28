@@ -7,7 +7,8 @@ function dateTimeField(id, name, args) {
   const defaultValue = args && args.defaultValue;
   const validator = args && args.validator;
 
-  return field(id, name, Types.DateTimeType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.DateTimeType, isRequired, isListField,
+    false, false, defaultValue, validator);
 }
 
 module.exports = dateTimeField;

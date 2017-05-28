@@ -8,7 +8,8 @@ function numberField(id, name, args) {
     args.defaultValue : undefined;
   const validator = args && args.validator;
 
-  return field(id, name, Types.NumberType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.NumberType, isRequired, isListField,
+    false, false, defaultValue, validator);
 }
 
 module.exports = numberField;

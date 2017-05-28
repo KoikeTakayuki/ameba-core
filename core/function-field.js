@@ -6,7 +6,8 @@ function functionField(id, name, args) {
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
   const validator = args && args.validator;
 
-  return field(id, name, Types.FunctionType, isRequired, false, defaultValue, validator);
+  return field(id, name, Types.FunctionType, isRequired, false,
+    false, false, defaultValue, validator);
 }
 
 module.exports = functionField;

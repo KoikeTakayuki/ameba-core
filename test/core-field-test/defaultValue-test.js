@@ -6,8 +6,8 @@ describe('defaultValueField', function () {
     defaultValueField.should.be.an.Object();
   });
 
-  it('should have 8 keys', function () {
-    Object.keys(defaultValueField).should.have.length(8);
+  it('should have 10 keys', function () {
+    Object.keys(defaultValueField).should.have.length(10);
   });
 
   it('should have keys: [type, id, name, fieldType, isRequired, isListField, defaultValue, validator]', function () {

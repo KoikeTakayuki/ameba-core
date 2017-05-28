@@ -1,6 +1,7 @@
 const Types = require('./types');
 
-function field(id, name, fieldType, isRequired, isListField, defaultValue, validator) {
+function field(id, name, fieldType, isRequired,
+  isListField, isUnique, autoIncrement, defaultValue, validator) {
   return {
     id,
     name,
@@ -8,6 +9,8 @@ function field(id, name, fieldType, isRequired, isListField, defaultValue, valid
     fieldType,
     isRequired,
     isListField,
+    isUnique,
+    autoIncrement,
     defaultValue,
     validator,
   };

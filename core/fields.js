@@ -28,6 +28,8 @@ Fields.isPrimitiveType = booleanField('isPrimitiveType', '基本レコード', {
 Fields.fieldType = recordField('fieldType', 'フィールドタイプ', Types.RecordType, { isRequired: true });
 Fields.isRequired = booleanField('isRequired', '必須フィールド', { defaultValue: false });
 Fields.isListField = booleanField('isListField', 'リストフィールド', { defaultValue: false });
+Fields.isUnique = booleanField('isUnique', 'ユニーク', { defaultValue: false });
+Fields.autoIncrement = booleanField('autoIncrement', 'オート', { defaultValue: false });
 Fields.defaultValue = recordField('defaultValue', 'デフォルト値', Types.FunctionType);
 Fields.validator = functionField('validator', 'バリデーター', Types.FunctionType);
 

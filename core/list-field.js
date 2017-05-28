@@ -6,7 +6,8 @@ function listField(id, name, fieldType, args) {
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
   const validator = args && args.validator;
 
-  return field(id, name, fieldType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, fieldType, isRequired, isListField,
+    false, false, defaultValue, validator);
 }
 
 module.exports = listField;

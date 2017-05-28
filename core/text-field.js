@@ -6,8 +6,10 @@ function textField(id, name, args) {
   const isListField = false;
   const defaultValue = (args && args.defaultValue ? args.defaultValue : undefined);
   const validator = args && args.validator;
+  const isUnique = args && args.isUnique;
 
-  return field(id, name, Types.TextType, isRequired, isListField, defaultValue, validator);
+  return field(id, name, Types.TextType, isRequired, isListField,
+    isUnique, false, defaultValue, validator);
 }
 
 module.exports = textField;
