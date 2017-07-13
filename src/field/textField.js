@@ -1,8 +1,9 @@
 const Text = require('../core/TextType').Text;
+const Field = require('../core/Field');
 const _ = require('lodash');
 
 const textField = (id, name, args) => {
-  const result = { id, name, fieldType: Text };
+  const result = { type: Field, id, name, fieldType: Text };
 
   if (!args) {
     return result;

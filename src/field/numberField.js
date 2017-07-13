@@ -1,8 +1,9 @@
 const Real = require('../core/NumberType').Real;
+const Field = require('../core/Field');
 const _ = require('lodash');
 
 const numberField = (id, name, args) => {
-  const result = { id, name, fieldType: Real };
+  const result = { type: Field, id, name, fieldType: Real };
 
   if (!args) {
     return result;
