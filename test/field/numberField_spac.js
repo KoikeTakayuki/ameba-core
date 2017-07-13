@@ -1,6 +1,6 @@
 const should = require('should');
 const numberField = require('../../').field.numberField;
-const NumberType = require('../../').type.NumberType;
+const NumberType = require('../../').core.NumberType;
 
 const testId = 'id';
 const testName = 'name';

@@ -1,6 +1,6 @@
 const should = require('should');
 const booleanField = require('../../').field.booleanField;
-const BooleanType = require('../../').type.BooleanType;
+const BooleanType = require('../../').core.BooleanType;
 
 const testId = 'id';
 const testName = 'name';

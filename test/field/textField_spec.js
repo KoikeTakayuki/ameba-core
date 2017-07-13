@@ -1,6 +1,6 @@
 const should = require('should');
 const textField = require('../../').field.textField;
-const TextType = require('../../').type.TextType;
+const TextType = require('../../').core.TextType;
 
 const testId = 'id';
 const testName = 'name';
