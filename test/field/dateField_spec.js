@@ -6,7 +6,7 @@ const Field = require('../../').core.Field;
 const testId = 'id';
 const testName = 'name';
 const testIsRequired = true;
-const testDefault = 10;
+const testDefault = new Date();
 const testIsUnique = true;
 const testValidator = () => 'test';
 const testIsListType = true;
