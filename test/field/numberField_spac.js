@@ -36,7 +36,7 @@ describe('numberField', function () {
     numberField(testId, testName).should.have.property('id', testId);
   });
 
-  it('should return an object whose "fieldType" property is numberType.Real', function () {
+  it('should return an object whose "fieldType" property is NumberType.Real', function () {
     numberField(testId, testName).should.have.property('fieldType', NumberType.Real);
   });
 

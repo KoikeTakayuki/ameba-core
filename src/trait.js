@@ -1,4 +1,4 @@
-const Trait = require('../core/Trait');
+const Trait = require('./core/Trait');
 
 const trait = (id, name, fields) => ({ type: Trait, id, name, fields });
 

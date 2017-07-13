@@ -1,9 +1,11 @@
 const core = require('./src/core');
 const field = require('./src/field');
-const type = require('./src/type');
+const recordType = require('./src/recordType');
+const trait = require('./src/trait');
 
 module.exports = {
   core,
-  type,
+  recordType,
+  trait,
   field,
 };
