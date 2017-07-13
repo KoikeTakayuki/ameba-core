@@ -4,7 +4,7 @@ module.exports = Record;
 const RecordType = require('./RecordType');
 
 Record.type = RecordType;
-Record.id = 'Record';
+Record.id = 'Core.Record';
 Record.name = 'Record';
 Record.fields = [];
 Record.traits = [];

@@ -10,7 +10,7 @@ const textField = field.textField;
 const recordField = field.recordField;
 
 Trait.type = RecordType;
-Trait.id = 'Trait';
+Trait.id = 'Core.Trait';
 Trait.name = 'Trait';
 Trait.fields = [
   textField('id', 'ID', { isRequired: true, isUnique: true }),

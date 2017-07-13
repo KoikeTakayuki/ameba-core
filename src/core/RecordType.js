@@ -9,7 +9,7 @@ const recordField = field.recordField;
 const booleanField = field.booleanField;
 
 RecordType.type = RecordType;
-RecordType.id = 'RecordType';
+RecordType.id = 'Core.RecordType';
 RecordType.name = 'RecordType';
 RecordType.fields = [
   recordField('traits', 'traits', Trait, { isListType: true }),
