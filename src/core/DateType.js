@@ -1,5 +1,11 @@
 module.exports = {
-  Date: 'Date',
-  Time: 'Time',
-  DateTime: 'DateTime',
+  Date: {
+    id: 'Date',
+  },
+  Time: {
+    id: 'Time',
+  },
+  DateTime: {
+    id: 'DateTime',
+  },
 };

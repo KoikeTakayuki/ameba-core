@@ -1,1 +1,3 @@
-module.exports = 'Boolean';
+module.exports = {
+  id: 'Boolean',
+};

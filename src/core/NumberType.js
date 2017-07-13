@@ -1,4 +1,8 @@
 module.exports = {
-  Integer: 'Integer',
-  Real: 'Real',
+  Integer: {
+    id: 'Integer',
+  },
+  Real: {
+    id: 'Real',
+  },
 };

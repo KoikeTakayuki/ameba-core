@@ -1,1 +1,3 @@
-module.exports = 'Function';
+module.exports = {
+  id: 'Function',
+};

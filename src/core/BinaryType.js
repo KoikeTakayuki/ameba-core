@@ -1,1 +1,3 @@
-module.exports = 'Binary';
+module.exports = {
+  id: 'Binary',
+};

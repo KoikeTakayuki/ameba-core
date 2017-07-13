@@ -1,5 +1,11 @@
 module.exports = {
-  Text: 'Text',
-  LongText: 'LongText',
-  RichText: 'RichText',
+  Text: {
+    id: 'Text',
+  },
+  LongText: {
+    id: 'LongText',
+  },
+  RichText: {
+    id: 'RichText',
+  },
 };
