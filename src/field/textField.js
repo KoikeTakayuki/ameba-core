@@ -1,4 +1,4 @@
-const Text = require('../type/TextType').Text;
+const Text = require('../core/TextType').Text;
 const _ = require('lodash');
 
 const textField = (id, name, args) => {

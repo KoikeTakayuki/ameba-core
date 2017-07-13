@@ -1,4 +1,4 @@
-const Real = require('../type/NumberType').Real;
+const Real = require('../core/NumberType').Real;
 const _ = require('lodash');
 
 const numberField = (id, name, args) => {

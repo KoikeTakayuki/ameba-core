@@ -1,4 +1,4 @@
-const BooleanType = require('../type/BooleanType');
+const BooleanType = require('../core/BooleanType');
 const _ = require('lodash');
 
 const booleanField = (id, name, args) => {
