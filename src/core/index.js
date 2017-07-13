@@ -6,6 +6,7 @@ const TextType = require('./TextType');
 const NumberType = require('./NumberType');
 const BooleanType = require('./BooleanType');
 const DateType = require('./DateType');
+const BinaryType = require('./BinaryType');
 
 module.exports = {
   Record,
@@ -16,4 +17,5 @@ module.exports = {
   NumberType,
   BooleanType,
   DateType,
+  BinaryType,
 };
