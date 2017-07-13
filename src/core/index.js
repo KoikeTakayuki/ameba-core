@@ -5,6 +5,7 @@ const Field = require('./Field');
 const TextType = require('./TextType');
 const NumberType = require('./NumberType');
 const BooleanType = require('./BooleanType');
+const DateType = require('./DateType');
 
 module.exports = {
   Record,
@@ -14,4 +15,5 @@ module.exports = {
   TextType,
   NumberType,
   BooleanType,
+  DateType,
 };
