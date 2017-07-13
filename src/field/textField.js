@@ -4,7 +4,12 @@ const _ = require('lodash');
 const textField = (id, name, args) => {
   const result = { id, name, fieldType: Text };
 
-  return Object.assign(result, _.pick(args, ['fieldType', 'maxLength', 'isRequired', 'isUnique', 'validator']));
+  if (!args) {
+    return result;
+  }
+
+  return Object.assign(result,
+    _.pick(args, ['fieldType', 'maxLength', 'isRequired', 'default', 'isUnique', 'validator', 'isListType']));
 };
 
 module.exports = textField;
