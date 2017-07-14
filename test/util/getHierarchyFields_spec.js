@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 const should = require('should');
 const getHierarchyFields = require('../../').util.getHierarchyFields;
 const core = require('../../').core;
@@ -24,7 +23,8 @@ describe('getHierarchyFields', function () {
   });
 
   it('should return concatenation of RecordType and Trait fields if RecordType is given', function () {
-    getHierarchyFields(core.RecordType).should.be.an.eql(core.Trait.fields.concat(core.RecordType.fields));
+    getHierarchyFields(core.RecordType)
+      .should.be.an.eql(core.Trait.fields.concat(core.RecordType.fields));
   });
 
   it('should return all fields of given recordType, its traits and baseType ', function () {
