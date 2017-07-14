@@ -7,7 +7,7 @@ const testId = 'testId';
 const testName = 'testName';
 const testFields = [textField('test', 'test')];
 
-describe('getHierarchyFields', function () {
+describe('trait', function () {
   it('should return an object', function () {
     trait(testId, testName, testFields).should.be.an.Object();
   });
