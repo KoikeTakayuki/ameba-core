@@ -1,11 +1,7 @@
+const createPrimitiveType = require('../util/createPrimitiveType');
+
 module.exports = {
-  Date: {
-    id: 'Date',
-  },
-  Time: {
-    id: 'Time',
-  },
-  DateTime: {
-    id: 'DateTime',
-  },
+  Date: createPrimitiveType('Date'),
+  Time: createPrimitiveType('Time'),
+  DateTime: createPrimitiveType('DateTime'),
 };

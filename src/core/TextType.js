@@ -1,11 +1,7 @@
+const createPrimitiveType = require('../util/createPrimitiveType');
+
 module.exports = {
-  Text: {
-    id: 'Text',
-  },
-  LongText: {
-    id: 'LongText',
-  },
-  RichText: {
-    id: 'RichText',
-  },
+  Text: createPrimitiveType('Text'),
+  LongText: createPrimitiveType('LongText'),
+  RichText: createPrimitiveType('RichText'),
 };

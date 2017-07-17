@@ -1,8 +1,6 @@
+const createPrimitiveType = require('../util/createPrimitiveType');
+
 module.exports = {
-  Integer: {
-    id: 'Integer',
-  },
-  Real: {
-    id: 'Real',
-  },
+  Integer: createPrimitiveType('Integer'),
+  Real: createPrimitiveType('Real'),
 };

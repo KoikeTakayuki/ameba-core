@@ -1,3 +1,3 @@
-module.exports = {
-  id: 'Binary',
-};
+const createPrimitiveType = require('../util/createPrimitiveType');
+
+module.exports = createPrimitiveType('Binary');

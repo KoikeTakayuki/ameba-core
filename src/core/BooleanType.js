@@ -1,3 +1,3 @@
-module.exports = {
-  id: 'Boolean',
-};
+const createPrimitiveType = require('../util/createPrimitiveType');
+
+module.exports = createPrimitiveType('Boolean');

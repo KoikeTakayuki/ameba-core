@@ -1,3 +1,3 @@
-module.exports = {
-  id: 'Function',
-};
+const createPrimitiveType = require('../util/createPrimitiveType');
+
+module.exports = createPrimitiveType('Function');
