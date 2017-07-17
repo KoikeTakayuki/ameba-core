@@ -1,5 +1,7 @@
-const Record = require('./core/Record');
-const RecordType = require('./core/RecordType');
+const core = require('./core');
+
+const Record = core.Record;
+const RecordType = core.RecordType;
 const _ = require('lodash');
 
 const recordType = (id, name, fields, args) => {
