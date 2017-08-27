@@ -25,6 +25,7 @@
     "should": "^11.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "mysql2": "^1.4.1"
   }
 }

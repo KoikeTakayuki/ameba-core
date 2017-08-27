@@ -5,7 +5,15 @@ const RecordType = core.RecordType;
 const _ = require('lodash');
 
 const recordType = (id, name, fields, args) => {
-  const result = { type: RecordType, id, name, fields, baseType: Record, isInnerType: false };
+  const result = {
+    type: RecordType,
+    id,
+    name,
+    fields,
+    traits: [],
+    baseType: Record,
+    isInnerType: false,
+  };
 
   if (!args) {
     return result;

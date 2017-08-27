@@ -1,23 +1,14 @@
-const Record = require('./Record');
-const RecordType = require('./RecordType');
-const Trait = require('./Trait');
-const Field = require('./Field');
-const Text = require('./Text');
-const IntegerType = require('./Integer');
-const NumberType = require('./Number');
-const BooleanType = require('./Boolean');
-const DateTimeType = require('./DateTime');
-const FunctionType = require('./Function');
+const core = {};
+module.exports = core;
 
-module.exports = {
-  Record,
-  RecordType,
-  Trait,
-  Field,
-  Text,
-  Integer: IntegerType,
-  Number: NumberType,
-  Boolean: BooleanType,
-  DateTime: DateTimeType,
-  Function: FunctionType,
-};
+core.Record = require('./Record');
+core.RecordType = require('./RecordType');
+core.Trait = require('./Trait');
+core.Field = require('./Field');
+core.Text = require('./Text');
+core.Integer = require('./Integer');
+core.Number = require('./Number');
+core.Boolean = require('./Boolean');
+core.DateTime = require('./DateTime');
+core.Function = require('./Function');
+

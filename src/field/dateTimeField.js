@@ -9,7 +9,8 @@ const dateField = (id, name, args) => {
     name,
     fieldType: core.DateTime,
     isRequired: false,
-    default: null,
+    defaultCurrentTimeOnCreate: false,
+    defaultCurrentTimeOnUpdate: false,
     validator: null,
     isListType: false,
   };
@@ -18,7 +19,8 @@ const dateField = (id, name, args) => {
     return result;
   }
 
-  return Object.assign(result, _.pick(args, ['isRequired', 'default', 'validator', 'isListType']));
+  return Object.assign(result, _.pick(args,
+    ['isRequired', 'defaultCurrentTimeOnCreate','defaultCurrentTimeOnUpdate', 'validator', 'isListType']));
 };
 
 module.exports = dateField;

@@ -1,5 +1,5 @@
 const should = require('should');
-const dateField = require('../../').field.dateField;
+const dateField = require('../../').field.dateTimeField;
 const DateType = require('../../').core.DateType;
 const Field = require('../../').core.Field;
 
