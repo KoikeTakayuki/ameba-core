@@ -3,7 +3,6 @@ const numberField = require('./numberField');
 const booleanField = require('./booleanField');
 const dateField = require('./dateField');
 const recordField = require('./recordField');
-const binaryField = require('./binaryField');
 const functionField = require('./functionField');
 
 module.exports = {
@@ -12,6 +11,5 @@ module.exports = {
   booleanField,
   dateField,
   recordField,
-  binaryField,
   functionField,
 };
