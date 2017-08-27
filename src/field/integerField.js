@@ -2,14 +2,16 @@ const core = require('../core');
 const Field = require('../core/Field');
 const _ = require('lodash');
 
-const numberField = (id, name, args) => {
+const integerField = (id, name, args) => {
   const result = {
     type: Field,
     id,
     name,
-    fieldType: core.Number,
+    fieldType: core.Integer,
     isRequired: false,
     default: null,
+    isUnique: false,
+    isAutoIncrement: false,
     validator: null,
     isListType: false,
   };
@@ -18,7 +20,7 @@ const numberField = (id, name, args) => {
     return result;
   }
 
-  return Object.assign(result, _.pick(args, ['isRequired', 'default', 'validator', 'isListType']));
+  return Object.assign(result, _.pick(args, ['isRequired', 'default', 'isUnique', 'isAutoIncrement', 'validator', 'isListType']));
 };
 
-module.exports = numberField;
+module.exports = integerField;

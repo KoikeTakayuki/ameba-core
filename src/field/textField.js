@@ -1,4 +1,4 @@
-const Text = require('../core/TextType');
+const Text = require('../core/Text');
 const Field = require('../core/Field');
 const DEFAULT_MAX_TEXT_LENGTH = require('../constants').DEFAULT_MAX_TEXT_LENGTH;
 
